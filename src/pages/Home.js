@@ -1,8 +1,8 @@
 import React from "react";
-import Layout from "./../components/Layout";
+import Layout from "../components/Layout";
 // import Familia from "./Familia";
 import Familia2 from "./Familia2";
-import InformacionFamilia from "./../components/InformacionFamilia";
+import InformacionFamilia from "../components/InformacionFamilia";
 
 const Home = () => {
   return (
