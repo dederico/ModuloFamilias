@@ -1,0 +1,21 @@
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth {
+  height: 100vh;
+  h2 {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+  }
+  button {
+    margin-top: 30px;
+  }
+  .link-auth {
+    margin-top: 30px;
+    display: block;
+    color: lightslategrey;
+  }
+}

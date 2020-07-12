@@ -2,8 +2,10 @@ import React from "react";
 import Layout from "../components/Layout";
 // import Familia from "./Familia";
 // import Familia2 from "./Familia2";
-import InformacionFamilia from "../components/InformacionFamilia";
-import AuthAccount from "./AuthAccount";
+// import InformacionFamilia from "../components/InformacionFamilia";
+import AuthAccount from "./auth/AuthAccount";
+import AddFamilia from "./AgregarFamilia";
+
 const Home = () => {
   return (
     <Layout>
@@ -11,10 +13,10 @@ const Home = () => {
         <div className="parent white">
           <div className="box green">
             <AuthAccount />
-            <InformacionFamilia />
           </div>
         </div>
       </div>
+      <AddFamilia />
       <br />
     </Layout>
   );
