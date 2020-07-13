@@ -1,8 +1,9 @@
 import React from "react";
 import { UncontrolledCarousel } from "reactstrap";
-
+import "./Familia2.scss";
 const items = [
   {
+    className: "fotoFamilia",
     src:
       "http://udgtv.com/wp-content/uploads/2019/08/Carlos-slim-Andres-Manuel-Lopez-Obrador-EFE-696x464.jpg",
     altText: "Familia",
@@ -11,6 +12,7 @@ const items = [
     key: "1",
   },
   {
+    className: "fotoFachada",
     src:
       "https://www.liderempresarial.com/wp-content/uploads/2014/06/Carlos_Slim_bmv_americamovil_liderempresarial.jpg",
     altText: "Slide 2",
@@ -19,6 +21,7 @@ const items = [
     key: "2",
   },
   {
+    className: "fotoCuarto",
     src: "https://cdn.forbes.com.mx/2017/01/slim_4-e1520353765569-640x360.jpg",
     altText: "Slide 3",
     caption: "Habitacion reservada para la adopcion",

@@ -1,7 +1,6 @@
 import React from "react";
 import InformacionFamilia from "../components/InformacionFamilia";
 import Layout from "../components/Layout";
-import CardFamilia from "../components/CardFamilia";
 import AddFamilia from "../components/AgregarFamilia";
 
 const AgregarFamilia = () => {

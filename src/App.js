@@ -1,9 +1,9 @@
 import React from "react";
 import Home from "./pages/Home";
 import AgregarFamilia from "./pages/AgregarFamilia";
-import Familia from "./pages/Familia";
+import Familia2 from "./pages/Familia2";
 import P404 from "./pages/P404";
-//import CreateAccount from "./pages/CreateAccount";
+import CreateAccount from "./pages/auth/CreateAccount";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -14,18 +14,18 @@ function App() {
         <Route exact path="/">
           <Home></Home>
         </Route>
+        <Route path="/create-account">
+          <CreateAccount></CreateAccount>
+        </Route>
         <Route exact path="/familia/agregar">
           <AgregarFamilia></AgregarFamilia>
         </Route>
         <Route exact path="/familia/:id">
-          <Familia></Familia>
+          <Familia2></Familia2>
         </Route>
         <Route path="*">
           <P404></P404>
         </Route>
-        {/* <Route path="/create-account">
-          <CreateAccount></CreateAccount>
-        </Route> */}
       </Switch>
     </Router>
   );

@@ -1,0 +1,5 @@
+{
+  "AppSyncApiName": "authorization",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": "false"
+}

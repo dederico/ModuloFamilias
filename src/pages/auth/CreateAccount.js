@@ -42,32 +42,32 @@ const CreateAccount = ({ history }) => {
   return (
     <div className="flex-center auth">
       <div>
-        <h1 className="text-center">Create an account with mobter</h1>
-        <h2 className="text-center">And take control of your calls</h2>
+        <h1 className="text-center">Crea tu cuenta</h1>
+        <h2 className="text-center">Y comienza a trabajar</h2>
         <FormGroup>
-          <Label>Username</Label>
+          <Label>Cuenta de correo</Label>
           <Input
             type="text"
             name="user"
-            placeholder="Insert username"
+            placeholder="Ingresa tu correo"
             onChange={(e) => handleOnChange(e, setUsername)}
           />
         </FormGroup>
         <FormGroup>
-          <Label>Email</Label>
+          <Label>Verifica tu correo</Label>
           <Input
             type="text"
             name="email"
-            placeholder="Insert your email"
+            placeholder="Ingresa nuevamente tu correo"
             onChange={(e) => handleOnChange(e, setEmail)}
           />
         </FormGroup>
         <FormGroup>
-          <Label>Password</Label>
+          <Label>Crea tu contraseña</Label>
           <Input
             type="password"
             name="password"
-            placeholder="Insert your password"
+            placeholder="ingresa aqui tu contraseña"
             onChange={(e) => handleOnChange(e, setPassword)}
           />
         </FormGroup>
@@ -75,7 +75,7 @@ const CreateAccount = ({ history }) => {
           Create account
         </button>
         {alert && <small>{alert}</small>}
-        <Link to="/login" className="link-auth">
+        <Link to="/" className="link-auth">
           Already have an account? Log In
         </Link>
       </div>
