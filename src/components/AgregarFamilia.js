@@ -14,6 +14,7 @@ const AddFamilia = () => {
   });
   const handleChange = (event) => {
     // task { title, descript...}
+    // eslint-disable-next-line default-case
     switch (event.target.id) {
       case "apellidos":
         setFamilia({
@@ -39,7 +40,7 @@ const AddFamilia = () => {
           gastosMensuales: parseInt(event.target.value),
         });
         break;
-      case "vivenda":
+      case "vivienda":
         setFamilia({
           ...familia,
           vivienda: event.target.value,
@@ -52,7 +53,9 @@ const AddFamilia = () => {
   const createTask = () => {
     if (
       familia.apellidos.length > 0 &&
+      familia.checkbox !== false &&
       familia.ingresosMensuales > 0 &&
+      familia.gastosMensuales > 0 &&
       familia.vivienda.length > 0
     ) {
       axios
