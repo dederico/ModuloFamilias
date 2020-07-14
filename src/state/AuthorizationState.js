@@ -6,6 +6,7 @@ export const AuthorizationContext = createContext();
 
 export const AuthorizationProviderWithRouter = ({ children, history }) => {
   const [userId, setUserId] = useState("");
+  console.log(setUserId);
   const checkLoggedIn = async () => {
     try {
       const userData = await Auth.currentAuthenticatedUser();
