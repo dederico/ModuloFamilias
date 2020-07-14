@@ -4,7 +4,7 @@ import AddFamilia from "./../components/AgregarFamilia";
 import axios from "axios";
 import FamiliaEvaluada from "./../components/FamiliaEvaluada";
 
-const Home = () => {
+const EvaluacionFamilia = () => {
   const [familia, setFamilia] = useState({});
   const [error, setError] = useState(null);
 
@@ -29,15 +29,15 @@ const Home = () => {
 
   const showFamilias = () => {
     return error ? (
-      <h1>{error}</h1>
+      <h1>{JSON.stringify(error)}</h1>
     ) : (
-      Object.keys(familia).map((familia) => (
+      Object.keys(familia).map((f) => (
         <AddFamilia
-          apellido={familia[familia].apellido}
+          apellidos={familia[f].apellidos}
           checkbox={false}
-          ingresosMensuales={familia[familia].ingresosMensuales}
-          gastosMensuales={familia[familia].gastosMensuales}
-          vivienda={familia[familia].vivienda}
+          ingresosMensuales={familia[f].ingresosMensuales}
+          gastosMensuales={familia[f].gastosMensuales}
+          vivienda={familia[f].vivienda}
           isHome={true}
         />
       ))
@@ -45,13 +45,13 @@ const Home = () => {
   };
   const evalFamilia = () => {
     return error ? (
-      <h1>{error}</h1>
+      <h1>{JSON.stringify(error)}</h1>
     ) : (
-      Object.keys(familia).map((familia) => (
+      Object.keys(familia).map((f) => (
         <FamiliaEvaluada
-          ingresosMensuales={familia[familia].ingresosMensuales}
-          gastosMensuales={familia[familia].gastosMensuales}
-          vivienda={familia[familia].vivenda}
+          ingresosMensuales={familia[f].ingresosMensuales}
+          gastosMensuales={familia[f].gastosMensuales}
+          vivienda={familia[f].vivenda}
         />
       ))
     );
@@ -67,4 +67,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default EvaluacionFamilia;

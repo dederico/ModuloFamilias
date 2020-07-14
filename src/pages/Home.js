@@ -4,7 +4,7 @@ import Layout from "../components/Layout";
 // import Familia2 from "./Familia2";
 // import InformacionFamilia from "../components/InformacionFamilia";
 import AuthAccount from "./auth/AuthAccount";
-
+import EvaluacionFamilia from "../components/EvaluacionFamilia";
 const Home = () => {
   return (
     <Layout>
@@ -16,7 +16,7 @@ const Home = () => {
         </div>
       </div>
       <br />
-      <Home />
+      <EvaluacionFamilia />
     </Layout>
   );
 };
