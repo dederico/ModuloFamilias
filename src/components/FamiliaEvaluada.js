@@ -1,12 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-const FamiliaEvaluada = ({ ingresosMensuales, gastosMensuales, vivienda }) => {
+const FamiliaEvaluada = ({
+  ingresosMensuales,
+  gastosMensuales,
+  vivienda,
+  apellidos,
+}) => {
+  const [viable, setViable] = useState(false);
+  useEffect(() => {
+    /* eslint-disable */
+    ingresosMensuales - gastosMensuales > 0 && vivienda === "Propia"
+      ? setViable(true)
+      : setViable(false);
+    //vivienda === "Propia" ? setViable(true) : setViable(false);
+  }, []);
   return (
-    <h1>
-      {ingresosMensuales - gastosMensuales > 0 && vivienda
-        ? "Es viable"
-        : "No es viable"}
-    </h1>
+    <>
+      <p>
+        {apellidos} <b>{viable ? "Es viable" : "No es viable"}</b>
+      </p>
+      <br />
+    </>
   );
 };
 export default FamiliaEvaluada;

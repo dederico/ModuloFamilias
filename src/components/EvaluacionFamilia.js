@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Layout from "./../components/Layout";
+// import Layout from "./../components/Layout";
 import AddFamilia from "./../components/AgregarFamilia";
 import axios from "axios";
 import FamiliaEvaluada from "./../components/FamiliaEvaluada";
@@ -14,7 +14,7 @@ const EvaluacionFamilia = () => {
 
   const getFamilia = () => {
     axios
-      .get("https://adopciones-db12b.firebaseio.com//familias.json")
+      .get("https://adopciones-db12b.firebaseio.com/familias.json")
       .then(({ data, status }) => {
         if (data !== null) {
           setFamilia(data);
@@ -31,7 +31,7 @@ const EvaluacionFamilia = () => {
     return error ? (
       <h1>{JSON.stringify(error)}</h1>
     ) : (
-      Object.keys(familia).map((f) => (
+      Object.keys(familia).map((f, index) => (
         <AddFamilia
           apellidos={familia[f].apellidos}
           checkbox={false}
@@ -49,21 +49,21 @@ const EvaluacionFamilia = () => {
     ) : (
       Object.keys(familia).map((f) => (
         <FamiliaEvaluada
+          f={f}
+          apellidos={familia[f].apellidos}
           ingresosMensuales={familia[f].ingresosMensuales}
           gastosMensuales={familia[f].gastosMensuales}
-          vivienda={familia[f].vivenda}
+          vivienda={familia[f].vivienda}
         />
       ))
     );
   };
 
   return (
-    <Layout title="Home">
-      <div className="d-flex justify-content-center flex-wrap overflow-auto ">
-        {showFamilias()}
-        {evalFamilia()}
-      </div>
-    </Layout>
+    <div className="d-flex justify-content-center flex-wrap overflow-auto ">
+      {/* {showFamilias()} */}
+      {evalFamilia(familia)}
+    </div>
   );
 };
 

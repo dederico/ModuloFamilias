@@ -2,8 +2,22 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import Layout from "./../components/Layout";
 import axios from "axios";
+// import {
+//   InputGroup,
+//   InputGroupAddon,
+//   InputGroupText,
+//   Input,
+//   Button,
+//   DropdownToggle,
+//   InputGroupButtonDropdown,
+//   DropdownMenu,
+//   DropdownItem,
+// } from "reactstrap";
 
 const AddFamilia = () => {
+  // const [splitButtonOpen, setSplitButtonOpen] = useState(false);
+  // const toggleSplit = () => setSplitButtonOpen(!splitButtonOpen);
+
   const history = useHistory();
   const [familia, setFamilia] = useState({
     apellidos: "",
@@ -83,60 +97,142 @@ const AddFamilia = () => {
       {JSON.stringify(familia)}
       <h1>Agregar Familia</h1>
       <div>
-        <div className="form-group">
-          <label for="title">Apellidos </label>
-          <input
-            type="text"
-            className="form-control"
-            id="apellidos"
-            value={familia.apellidos}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="form-group">
-          <label for="description">Ingresos Mensuales : </label>
-          <input
-            type="text"
-            className="form-control"
-            id="ingresosMensuales"
+        {/* <br />
+        <label for="title">Apellidos</label>
+        <InputGroup>
+          <InputGroupAddon addonType="prepend">
+            <InputGroupText>Familia:</InputGroupText>
+            <Input
+              pladecholder="Apellidos"
+              type="text"
+              value={familia.apellidos}
+              onChange={handleChange}
+            />
+          </InputGroupAddon>
+        </InputGroup> */}
+        <label for="title">Apellidos </label>
+        <input
+          type="text"
+          className="form-control"
+          id="apellidos"
+          value={familia.apellidos}
+          onChange={handleChange}
+        />
+      </div>
+      {/* <br />
+        <InputGroup>
+          <InputGroupAddon addonType="prepend">
+            <InputGroupText>Ingresos Mensuales</InputGroupText>
+          </InputGroupAddon>
+          <Input
+            placeholder=" $ Cantidad de Ingresos Mensuales totales de la familia"
             value={familia.ingresosMensuales}
             onChange={handleChange}
           />
-        </div>
-        <div className="form-group">
-          <label for="time">Gastos Mensuales: </label>
-          <input
-            type="text"
-            className="form-control"
-            id="gastosMensuales"
+          <InputGroupAddon addonType="append">
+            <InputGroupText>MXN</InputGroupText>
+          </InputGroupAddon>
+        </InputGroup> */}
+      <div className="form-group">
+        <label for="description">Ingresos Mensuales : </label>
+        <input
+          type="text"
+          className="form-control"
+          id="ingresosMensuales"
+          value={familia.ingresosMensuales}
+          onChange={handleChange}
+        />
+      </div>
+      {/* <br />
+        <InputGroup>
+          <InputGroupAddon addonType="prepend">
+            <InputGroupText>Gastos Mensuales</InputGroupText>
+          </InputGroupAddon>
+          <Input
+            placeholder=" $ Cantidad de Gastos Mensuales totales de la familia"
             value={familia.gastosMensuales}
             onChange={handleChange}
           />
-        </div>
-        <div className="form-group">
-          <label for="priority">Preparada para adopcion: </label>
-          <input
-            type="checkbox"
-            className="form-control"
-            id="checkbox"
+          <InputGroupAddon addonType="append">
+            <InputGroupText>MXN</InputGroupText>
+          </InputGroupAddon>
+        </InputGroup> */}
+      <div className="form-group">
+        <label for="time">Gastos Mensuales: </label>
+        <input
+          type="text"
+          className="form-control"
+          id="gastosMensuales"
+          value={familia.gastosMensuales}
+          onChange={handleChange}
+        />
+      </div>
+      {/* <br />
+        <InputGroup>
+          <InputGroupAddon addonType="prepend">
+            <InputGroupText>
+              <Input
+                addon
+                type="checkbox"
+                aria-label="Checkbox for following text input"
+              />
+            </InputGroupText>
+          </InputGroupAddon>
+          <Input
+            placeholder="Familia autorizada para adopcion"
             value={familia.checkbox}
             onChange={handleChange}
           />
-        </div>
-        <div className="form-group">
-          <label for="priority">Vivienda: </label>
-          <input
-            type="text"
-            className="form-control"
-            id="vivienda"
+        </InputGroup> */}
+      <div className="form-group">
+        <label for="priority">Preparada para adopcion: </label>
+        <input
+          type="checkbox"
+          className="form-control"
+          id="checkbox"
+          value={familia.checkbox}
+          onChange={handleChange}
+        />
+      </div>
+      {/* <br />
+        <InputGroup>
+          <InputGroupButtonDropdown
+            addonType="prepend"
+            isOpen={splitButtonOpen}
+            toggle={toggleSplit}
+          >
+            <Button outline>Vivienda</Button>
+            <DropdownToggle split outline />
+            <DropdownMenu>
+              <DropdownItem>Propia</DropdownItem>
+              <DropdownItem>En Credito</DropdownItem>
+              <DropdownItem>Familiar</DropdownItem>
+              <DropdownItem>Arrendamiento</DropdownItem>
+              <DropdownItem>Desconocido</DropdownItem>
+            </DropdownMenu>
+          </InputGroupButtonDropdown>
+          <Input
+            placeholder="Propiedad de la vivienda"
             value={familia.vivienda}
             onChange={handleChange}
           />
-        </div>
-        <button type="submit" className="btn btn-primary" onClick={createTask}>
-          Agregar Familia
-        </button>
+        </InputGroup> */}
+      <div className="form-group">
+        <label for="priority">Vivienda: </label>
+        <input
+          type="text"
+          className="form-control"
+          id="vivienda"
+          value={familia.vivienda}
+          onChange={handleChange}
+        />
       </div>
+      <br />
+      <button type="submit" className="btn btn-primary" onClick={createTask}>
+        Agregar Familia
+      </button>
+      <br />
+      <br />
     </Layout>
   );
 };

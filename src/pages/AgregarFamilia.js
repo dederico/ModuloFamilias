@@ -1,17 +1,20 @@
 import React from "react";
-import InformacionFamilia from "../components/InformacionFamilia";
-import Layout from "../components/Layout";
+// import InformacionFamilia from "../components/InformacionFamilia";
+// import Layout from "../components/Layout";
 import AddFamilia from "../components/AgregarFamilia";
 
 const AgregarFamilia = () => {
   return (
-    <Layout>
-      <h1>
+    // <Layout>
+    <div>
+      {/* <h1>
         En este formato, deberas llenar la informacion solicitada.
-        <InformacionFamilia />
-      </h1>
+        {/* <InformacionFamilia /> */}
+
       <AddFamilia />
-    </Layout>
+    </div>
+
+    // </Layout>
   );
 };
 export default AgregarFamilia;
