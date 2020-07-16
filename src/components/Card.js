@@ -14,7 +14,7 @@ import { Link, useParams } from "react-router-dom";
 import C from "../components/Familia";
 
 const Familia = () => {
-  const { apellidos } = useParams();
+  const { id } = useParams();
   const [fam, setFam] = useState({});
   const [error, setError] = useState(null);
 
@@ -51,7 +51,7 @@ const CardFamilia = (props) => {
           alt="Card image cap"
         />
         <CardBody>
-          <CardTitle>{apellidos}</CardTitle>
+          {/* <CardTitle>{apellidos}</CardTitle> */}
 
           <br />
           <CardSubtitle>Con 3 Hijos</CardSubtitle>
