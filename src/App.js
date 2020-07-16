@@ -3,7 +3,7 @@ import Home from "./pages/Home";
 import AgregarFamilia from "./pages/AgregarFamilia";
 import Familia2 from "./pages/Familia2";
 import P404 from "./pages/P404";
-import CreateAccount from "./pages/auth/CreateAccount";
+import AddUser from "./pages/auth/AddUser";
 import CardFamilia from "./pages/CardFamilia";
 import ProtectedRoute from "../src/components/ProtectedRoute";
 
@@ -18,7 +18,7 @@ function App() {
         </Route>
 
         <ProtectedRoute exact path="/create-account">
-          <CreateAccount />
+          <AddUser />
         </ProtectedRoute>
         <ProtectedRoute exact path="/list/familias">
           {/* FamiliaOuter */}

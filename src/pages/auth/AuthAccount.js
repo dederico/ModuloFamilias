@@ -78,15 +78,15 @@ const AuthAccount = () => {
             onChange={(e) => handleOnChange(e, setPassword)}
           />
         </FormGroup>
-        <Link to="/card/familias">
+        <Link to="/list/familias">
           <button className="btn btn-primary btn-block" onClick={authAccount}>
             Ingreso
           </button>
         </Link>
         {alert && <small>{alert}</small>}
-        <Link to="/create-account" className="link-auth">
+        {/* <Link to="/create-account" className="link-auth">
           Crea una cuenta para empezar a trabajar.
-        </Link>
+        </Link> */}
       </div>
     </div>
   );

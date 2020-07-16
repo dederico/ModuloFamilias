@@ -1,25 +1,33 @@
 import React from "react";
-import {
-  Card,
-  CardImg,
-  CardText,
-  CardBody,
-  CardTitle,
-  CardSubtitle,
-  Button,
-} from "reactstrap";
+import { useHistory } from "react-router-dom";
+
+import { Card, CardImg, CardBody, CardTitle, CardSubtitle } from "reactstrap";
 import "./OuterFamiliaCard.scss";
-// import axios from "axios";
+import axios from "axios";
 // import { Link, useParams } from "react-router-dom";
 // import C from "../components/Familia";
 
 const OuterFamiliaCard = ({
+  id,
   apellidos,
   checkbox,
   ingresosMensuales,
   gastosMensuales,
   vivienda,
 }) => {
+  const history = useHistory();
+
+  const url = `https://adopciones-db12b.firebaseio.com/familias/${id}.json`;
+  const deleteFamilia = () => {
+    axios
+      .delete(url)
+      .then(() => {
+        history.push("/list/familias");
+      })
+      .catch(({ response }) => {
+        alert(response);
+      });
+  };
   return (
     <div className="col-lg-3">
       <Card>
@@ -35,8 +43,12 @@ const OuterFamiliaCard = ({
           <CardSubtitle>ingresos mensuales: ${ingresosMensuales}</CardSubtitle>
           <br />
           <CardSubtitle>gastos mensuales: ${gastosMensuales}</CardSubtitle>
-
-          <Button>Mas informacion</Button>
+          <br />
+          <CardSubtitle>vivienda: {vivienda}</CardSubtitle>
+          <br />
+          <button className="btn btn-danger" onClick={deleteFamilia}>
+            Borrar
+          </button>
         </CardBody>
       </Card>
     </div>
