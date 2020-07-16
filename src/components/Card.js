@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   Card,
   CardImg,
@@ -9,11 +9,40 @@ import {
   Button,
 } from "reactstrap";
 import "./CardFamilia.scss";
+import axios from "axios";
+import { Link, useParams } from "react-router-dom";
+import C from "../components/Familia";
+
+const Familia = () => {
+  const { apellidos } = useParams();
+  const [fam, setFam] = useState({});
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    getFamilia();
+  }, []);
+
+  const getFamilia = () => {
+    axios
+      .get(`https://adopciones-db12b.firebaseio.com/familias/${id}.json`)
+      .then(({ data, status }) => {
+        if (data !== null) {
+          setFam(data);
+        } else {
+          setError("No existe esa familia");
+        }
+      })
+      .catch(({ response }) => {
+        setError(response);
+      });
+  };
+};
 
 const CardFamilia = (props) => {
   return (
     <div>
       <br></br>
+
       <Card>
         <CardImg
           top
@@ -22,7 +51,8 @@ const CardFamilia = (props) => {
           alt="Card image cap"
         />
         <CardBody>
-          <CardTitle>Familia "Gonzalez-Castano"</CardTitle>
+          <CardTitle>{apellidos}</CardTitle>
+
           <br />
           <CardSubtitle>Con 3 Hijos</CardSubtitle>
           <br />

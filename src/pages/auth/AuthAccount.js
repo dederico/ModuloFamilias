@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import createPersistedState from "use-persisted-state";
+// import createPersistedState from "use-persisted-state";
 // firebase
 // aun sin importar el firebaseConfig.js
-// import app from "../../pages/auth/firebaseConfig";
-import firebase from "firebase";
+import app from "../../pages/auth/firebaseConfig";
+// import firebase from "firebase";
 // utilities
 import { FormGroup, Input, Label } from "reactstrap";
 import { Link } from "react-router-dom";
@@ -27,27 +27,33 @@ const AuthAccount = () => {
     try {
       setAlert("Verificando credenciales del usuario");
       //comente el await
-      // const user = await app
-      //   .auth()
-      //   .signInWithEmailAndPassword(username, password);
 
-      firebase.auth().signInWithEmailAndPassword(username, password);
+      const user = await app
+        .auth()
+        .signInWithEmailAndPassword(username, password);
+
+      console.log(user);
+      window.sessionStorage.setItem("idToken", user.user.uid);
+
+      app.auth().signInWithEmailAndPassword(username, password);
       setAlert("Usuario verificado, redirigiendo a tu dashboard");
-      // console.log(user);
     } catch (error) {
       setAlert(error.message);
     }
   };
-  const useCounterState = createPersistedState("count");
-  const useCounter = (initialCount) => {
-    const [count, setCount] = useCounterState(initialCount);
-    return {
-      count,
-      increment: () => setCount((currentCount) => currentCount + 1),
-      decrement: () => setCount((currentCount) => currentCount - 1),
-    };
-  };
-  console.log(useCounter());
+
+  // Persistent
+  // const useCounterState = createPersistedState("count");
+  // const useCounter = (initialCount) => {
+  //   const [count, setCount] = useCounterState(initialCount);
+  //   return {
+  //     count,
+  //     increment: () => setCount((currentCount) => currentCount + 1),
+  //     decrement: () => setCount((currentCount) => currentCount - 1),
+  //   };
+  // };
+  // console.log(useCounter());
+
   return (
     <div className="flex-center auth">
       <div>

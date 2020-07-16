@@ -5,6 +5,7 @@ import Familia2 from "./pages/Familia2";
 import P404 from "./pages/P404";
 import CreateAccount from "./pages/auth/CreateAccount";
 import CardFamilia from "./pages/CardFamilia";
+import ProtectedRoute from "../src/components/ProtectedRoute";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -15,18 +16,20 @@ function App() {
         <Route exact path="/">
           <Home></Home>
         </Route>
-        <Route exact path="/create-account">
+
+        <ProtectedRoute exact path="/create-account">
           <CreateAccount></CreateAccount>
-        </Route>
-        <Route exact path="/card/familias">
+        </ProtectedRoute>
+        <ProtectedRoute exact path="/card/familias">
           <CardFamilia></CardFamilia>
-        </Route>
-        <Route exact path="/familia/agregar">
+        </ProtectedRoute>
+        <ProtectedRoute exact path="/familia/agregar">
           <AgregarFamilia></AgregarFamilia>
-        </Route>
-        <Route exact path="/familia/:id">
+        </ProtectedRoute>
+        <ProtectedRoute exact path="/familia/:id">
           <Familia2></Familia2>
-        </Route>
+        </ProtectedRoute>
+
         <Route path="*">
           <P404></P404>
         </Route>
