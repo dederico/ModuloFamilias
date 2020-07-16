@@ -37,7 +37,7 @@ const Familia2 = () => (
   <>
     <UncontrolledCarousel items={items} />
 
-    <Link to="/">HOME</Link>
+    <Link to="/list/familias">Familias</Link>
   </>
 );
 

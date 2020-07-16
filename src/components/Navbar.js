@@ -31,7 +31,11 @@ const Navbar = () => {
                   Agregar
                 </Link>
               </li>
-
+              <li className="nav-item active">
+                <Link to="/" className="nav-link">
+                  Cerrar
+                </Link>
+              </li>
               {/* <UncontrolledDropdown nav inNavbar>
             <DropdownToggle nav caret>
               Caracteristicas
