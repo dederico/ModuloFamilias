@@ -26,6 +26,11 @@ const Navbar = () => {
                   Familias
                 </Link>
               </li>
+              <li className="nav-item active">
+                <Link to="/familia/agregar" className="nav-link">
+                  Agregar
+                </Link>
+              </li>
 
               {/* <UncontrolledDropdown nav inNavbar>
             <DropdownToggle nav caret>

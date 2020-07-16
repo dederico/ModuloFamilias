@@ -1,6 +1,8 @@
 import React from "react";
 import { UncontrolledCarousel } from "reactstrap";
 import "./Familia2.scss";
+import { Link } from "react-router-dom";
+
 const items = [
   {
     className: "fotoFamilia",
@@ -11,6 +13,7 @@ const items = [
     header: "Familia",
     key: "1",
   },
+
   {
     className: "fotoFachada",
     src:
@@ -30,6 +33,12 @@ const items = [
   },
 ];
 
-const Familia2 = () => <UncontrolledCarousel items={items} />;
+const Familia2 = () => (
+  <>
+    <UncontrolledCarousel items={items} />
+
+    <Link to="/">HOME</Link>
+  </>
+);
 
 export default Familia2;

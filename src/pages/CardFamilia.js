@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Layout from "../components/Layout";
 import OuterFamiliaCard from "../components/OuterFamiliaCard";
-import Familia from "../components/Familia";
+import EvaluacionFamilia from "../components/EvaluacionFamilia";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 
@@ -60,6 +60,7 @@ const CardFamilia = () => {
           </div>
         </div>
       </div>
+      <EvaluacionFamilia />
       <br />
     </Layout>
   );
