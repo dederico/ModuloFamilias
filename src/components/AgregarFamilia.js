@@ -2,22 +2,8 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import Layout from "./../components/Layout";
 import axios from "axios";
-// import {
-//   InputGroup,
-//   InputGroupAddon,
-//   InputGroupText,
-//   Input,
-//   Button,
-//   DropdownToggle,
-//   InputGroupButtonDropdown,
-//   DropdownMenu,
-//   DropdownItem,
-// } from "reactstrap";
 
 const AddFamilia = () => {
-  // const [splitButtonOpen, setSplitButtonOpen] = useState(false);
-  // const toggleSplit = () => setSplitButtonOpen(!splitButtonOpen);
-
   const history = useHistory();
   const [familia, setFamilia] = useState({
     apellidos: "",
@@ -97,20 +83,7 @@ const AddFamilia = () => {
       {JSON.stringify(familia)}
       <h1>Agregar Familia</h1>
       <div>
-        {/* <br />
-        <label for="title">Apellidos</label>
-        <InputGroup>
-          <InputGroupAddon addonType="prepend">
-            <InputGroupText>Familia:</InputGroupText>
-            <Input
-              pladecholder="Apellidos"
-              type="text"
-              value={familia.apellidos}
-              onChange={handleChange}
-            />
-          </InputGroupAddon>
-        </InputGroup> */}
-        <label for="title">Apellidos </label>
+        <label htmlFor="title">Apellidos </label>
         <input
           type="text"
           className="form-control"
@@ -134,7 +107,7 @@ const AddFamilia = () => {
           </InputGroupAddon>
         </InputGroup> */}
       <div className="form-group">
-        <label for="description">Ingresos Mensuales : </label>
+        <label htmlFor="description">Ingresos Mensuales : </label>
         <input
           type="text"
           className="form-control"
@@ -158,7 +131,7 @@ const AddFamilia = () => {
           </InputGroupAddon>
         </InputGroup> */}
       <div className="form-group">
-        <label for="time">Gastos Mensuales: </label>
+        <label htmlFor="time">Gastos Mensuales: </label>
         <input
           type="text"
           className="form-control"
@@ -185,7 +158,7 @@ const AddFamilia = () => {
           />
         </InputGroup> */}
       <div className="form-group">
-        <label for="priority">Preparada para adopcion: </label>
+        <label htmlFor="priority">Preparada para adopcion: </label>
         <input
           type="checkbox"
           className="form-control"
@@ -218,7 +191,7 @@ const AddFamilia = () => {
           />
         </InputGroup> */}
       <div className="form-group">
-        <label for="priority">Vivienda: </label>
+        <label htmlFor="priority">Vivienda: </label>
         <input
           type="text"
           className="form-control"

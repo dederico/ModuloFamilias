@@ -18,7 +18,7 @@ function App() {
         </Route>
 
         <ProtectedRoute exact path="/create-account">
-          <CreateAccount></CreateAccount>
+          <CreateAccount />
         </ProtectedRoute>
         <ProtectedRoute exact path="/card/familias">
           <CardFamilia></CardFamilia>

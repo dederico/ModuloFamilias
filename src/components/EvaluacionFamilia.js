@@ -27,22 +27,6 @@ const EvaluacionFamilia = () => {
       });
   };
 
-  const showFamilias = () => {
-    return error ? (
-      <h1>{JSON.stringify(error)}</h1>
-    ) : (
-      Object.keys(familia).map((f, index) => (
-        <AddFamilia
-          apellidos={familia[f].apellidos}
-          checkbox={false}
-          ingresosMensuales={familia[f].ingresosMensuales}
-          gastosMensuales={familia[f].gastosMensuales}
-          vivienda={familia[f].vivienda}
-          isHome={true}
-        />
-      ))
-    );
-  };
   const evalFamilia = () => {
     return error ? (
       <h1>{JSON.stringify(error)}</h1>
@@ -61,7 +45,6 @@ const EvaluacionFamilia = () => {
 
   return (
     <div className="d-flex justify-content-center flex-wrap overflow-auto ">
-      {/* {showFamilias()} */}
       {evalFamilia(familia)}
     </div>
   );

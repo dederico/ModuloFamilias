@@ -1,42 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import {
   Card,
   CardImg,
   CardText,
   CardBody,
-  CardTitle,
+  // CardTitle,
   CardSubtitle,
   Button,
 } from "reactstrap";
 import "./CardFamilia.scss";
-import axios from "axios";
-import { Link, useParams } from "react-router-dom";
-import C from "../components/Familia";
-
-const Familia = () => {
-  const { id } = useParams();
-  const [fam, setFam] = useState({});
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    getFamilia();
-  }, []);
-
-  const getFamilia = () => {
-    axios
-      .get(`https://adopciones-db12b.firebaseio.com/familias/${id}.json`)
-      .then(({ data, status }) => {
-        if (data !== null) {
-          setFam(data);
-        } else {
-          setError("No existe esa familia");
-        }
-      })
-      .catch(({ response }) => {
-        setError(response);
-      });
-  };
-};
+// import axios from "axios";
+// import { Link, useParams } from "react-router-dom";
+// import C from "../components/Familia";
 
 const CardFamilia = (props) => {
   return (
