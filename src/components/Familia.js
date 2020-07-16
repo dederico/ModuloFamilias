@@ -7,6 +7,8 @@ const Familia = ({
   ingresosMensuales,
   vivienda,
 }) => {
-  console.log(Familia);
+  // operaciones, estado del componente, useEffect etc
+
+  return <p>Familia</p>;
 };
 export default Familia;

@@ -20,14 +20,16 @@ function App() {
         <ProtectedRoute exact path="/create-account">
           <CreateAccount />
         </ProtectedRoute>
-        <ProtectedRoute exact path="/card/familias">
-          <CardFamilia></CardFamilia>
+        <ProtectedRoute exact path="/list/familias">
+          {/* FamiliaOuter */}
+          <CardFamilia />
         </ProtectedRoute>
         <ProtectedRoute exact path="/familia/agregar">
           <AgregarFamilia></AgregarFamilia>
         </ProtectedRoute>
         <ProtectedRoute exact path="/familia/:id">
-          <Familia2></Familia2>
+          {/* FamiliaInner */}
+          <Familia2 />
         </ProtectedRoute>
 
         <Route path="*">

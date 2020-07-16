@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Layout from "../components/Layout";
-import Card from "../components/Card";
-import Familia from "../components/Info";
+import OuterFamiliaCard from "../components/OuterFamiliaCard";
+import Familia from "../components/Familia";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 
@@ -38,8 +38,8 @@ const CardFamilia = () => {
       <h1>{error}</h1>
     ) : (
       Object.keys(familias).map((familia) => (
-        <Familia
-          name={familias}
+        <OuterFamiliaCard
+          familias={familias}
           apellidos={familias[familia].apellidos}
           checkbox={familias[familia].checkbox}
           ingresosMensuales={familias[familia].ingresosMensuales}
@@ -52,14 +52,10 @@ const CardFamilia = () => {
 
   return (
     <Layout>
-      <div className="container-sm">
+      <div className="container">
         <div className="parent white">
           <div className="box green">
-            <div className="card-">{showFamilias()}></div>
-            <Card>
-              <Familia />
-            </Card>
-
+            <div className="row">{showFamilias()}</div>
             {informacionUsuario}
           </div>
         </div>

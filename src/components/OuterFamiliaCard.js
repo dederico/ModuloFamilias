@@ -4,20 +4,24 @@ import {
   CardImg,
   CardText,
   CardBody,
-  // CardTitle,
+  CardTitle,
   CardSubtitle,
   Button,
 } from "reactstrap";
-import "./CardFamilia.scss";
+import "./OuterFamiliaCard.scss";
 // import axios from "axios";
 // import { Link, useParams } from "react-router-dom";
 // import C from "../components/Familia";
 
-const CardFamilia = (props) => {
+const OuterFamiliaCard = ({
+  apellidos,
+  checkbox,
+  ingresosMensuales,
+  gastosMensuales,
+  vivienda,
+}) => {
   return (
-    <div>
-      <br></br>
-
+    <div className="col-lg-3">
       <Card>
         <CardImg
           top
@@ -26,15 +30,12 @@ const CardFamilia = (props) => {
           alt="Card image cap"
         />
         <CardBody>
-          {/* <CardTitle>{apellidos}</CardTitle> */}
+          <CardTitle>{apellidos}</CardTitle>
+          <br />
+          <CardSubtitle>ingresos mensuales: ${ingresosMensuales}</CardSubtitle>
+          <br />
+          <CardSubtitle>gastos mensuales: ${gastosMensuales}</CardSubtitle>
 
-          <br />
-          <CardSubtitle>Con 3 Hijos</CardSubtitle>
-          <br />
-          <CardText>
-            Buscan adoptar por que no han podido tener una hijo desde hace 5
-            anos que lo intentan.
-          </CardText>
           <Button>Mas informacion</Button>
         </CardBody>
       </Card>
@@ -42,4 +43,4 @@ const CardFamilia = (props) => {
   );
 };
 
-export default CardFamilia;
+export default OuterFamiliaCard;
