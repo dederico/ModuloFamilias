@@ -7,9 +7,7 @@ import { useParams } from "react-router-dom";
 
 const CardFamilia = () => {
   const { id } = useParams();
-  const [informacionUsuario] = useState(
-    window.sessionStorage.getItem("idToken")
-  );
+  const [informacionUsuario] = useState(window.sessionStorage.getItem("email"));
   const [familias, setFamilias] = useState({});
   const [error, setError] = useState(null);
 
@@ -39,6 +37,7 @@ const CardFamilia = () => {
     ) : (
       Object.keys(familias).map((familia) => (
         <OuterFamiliaCard
+          id={familia}
           familias={familias}
           apellidos={familias[familia].apellidos}
           checkbox={familias[familia].checkbox}
@@ -60,7 +59,7 @@ const CardFamilia = () => {
           </div>
         </div>
       </div>
-      <EvaluacionFamilia />
+      {/* <EvaluacionFamilia /> */}
       <br />
     </Layout>
   );

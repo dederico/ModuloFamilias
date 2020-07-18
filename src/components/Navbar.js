@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 //   DropdownToggle,
 //   DropdownMenu,
 //   DropdownItem,
-// } from "reactstrap";
+// } from "reactstrap"
+import "./Navbar.css";
 
 const Navbar = () => {
   return (
@@ -32,9 +33,9 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="nav-item active">
-                <Link to="/" className="nav-link">
+                <button onClick={"/"} className="nav-link">
                   Cerrar
-                </Link>
+                </button>
               </li>
               {/* <UncontrolledDropdown nav inNavbar>
             <DropdownToggle nav caret>

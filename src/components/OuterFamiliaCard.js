@@ -4,6 +4,7 @@ import { useHistory } from "react-router-dom";
 import { Card, CardImg, CardBody, CardTitle, CardSubtitle } from "reactstrap";
 import "./OuterFamiliaCard.scss";
 import axios from "axios";
+import FamiliaEvaluada from "../components/FamiliaEvaluada";
 // import { Link, useParams } from "react-router-dom";
 // import C from "../components/Familia";
 
@@ -46,6 +47,12 @@ const OuterFamiliaCard = ({
           <br />
           <CardSubtitle>vivienda: {vivienda}</CardSubtitle>
           <br />
+          <FamiliaEvaluada
+            apellidos={apellidos}
+            ingresosMensuales={ingresosMensuales}
+            gastosMensuales={gastosMensuales}
+            vivienda={vivienda}
+          />
           <button className="btn btn-danger" onClick={deleteFamilia}>
             Borrar
           </button>
