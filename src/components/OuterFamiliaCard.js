@@ -15,6 +15,13 @@ const OuterFamiliaCard = ({
   ingresosMensuales,
   gastosMensuales,
   vivienda,
+  espera,
+  tiempo,
+  preparacion,
+  hijos,
+  edad,
+  riesgo,
+  redesDeApoyo,
 }) => {
   const history = useHistory();
 
@@ -52,6 +59,13 @@ const OuterFamiliaCard = ({
             ingresosMensuales={ingresosMensuales}
             gastosMensuales={gastosMensuales}
             vivienda={vivienda}
+            espera={espera}
+            tiempo={tiempo}
+            preparacion={preparacion}
+            hijos={hijos}
+            edad={edad}
+            riesgo={riesgo}
+            redesDeApoyo={redesDeApoyo}
           />
           <button className="btn btn-danger" onClick={deleteFamilia}>
             Borrar

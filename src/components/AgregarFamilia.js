@@ -101,18 +101,18 @@ const AddFamilia = () => {
 
   const createTask = () => {
     if (
-      familia.apellidos.length > 0 &&
-      familia.checkbox !== false &&
-      familia.ingresosMensuales > 0 &&
-      familia.gastosMensuales > 0 &&
-      familia.vivienda.length > 0 &&
-      familia.espera.length > 0 &&
-      familia.tiempo.length > 0 &&
-      familia.preparacion.length > 0 &&
-      familia.hijos.length >= 0 &&
-      familia.edad.length > 0 &&
-      familia.riesgo.length > 0 &&
-      familia.redesDeApoyo.length > 0
+      familia.apellidos.length > 0
+      // familia.checkbox !== false &&
+      // familia.ingresosMensuales > 0 &&
+      // familia.gastosMensuales > 0 &&
+      // familia.vivienda.length > 0 &&
+      // familia.espera.length > 0 &&
+      // familia.tiempo.length > 0 &&
+      // familia.preparacion.length > 0 &&
+      // familia.hijos >= 0 &&
+      // familia.edad > 0 &&
+      // familia.riesgo.length > 0 &&
+      // familia.redesDeApoyo.length > 0
     ) {
       axios
         .post("https://adopciones-db12b.firebaseio.com//familias.json", familia)
@@ -163,7 +163,7 @@ const AddFamilia = () => {
       <div className="form-group">
         <label htmlFor="time">Gastos Mensuales: </label>
         <input
-          type="text"
+          type="number"
           className="form-control"
           id="gastosMensuales"
           value={familia.gastosMensuales}
@@ -192,11 +192,20 @@ const AddFamilia = () => {
           onChange={handleChange}
         />
       </div>
-
+      <div className="form-group">
+        <label htmlFor="description">Tiempo Dispoible de Atencion:</label>
+        <input
+          type="number"
+          className="form-control"
+          id="tiempo"
+          value={familia.tiempo}
+          onChange={handleChange}
+        />
+      </div>
       <div className="form-group">
         <label htmlFor="time">Tiempo en lista de espera: </label>
         <input
-          type="text"
+          type="number"
           className="form-control"
           id="espera"
           value={familia.espera}
@@ -205,11 +214,11 @@ const AddFamilia = () => {
       </div>
 
       <div className="form-group">
-        <label htmlFor="description"> Cursos de Preparacion:</label>
+        <label htmlFor="time"> Cursos de Preparacion:</label>
         <input
           type="number"
           className="form-control"
-          id="Preparacion para adopcion"
+          id="preparacion"
           value={familia.preparacion}
           onChange={handleChange}
         />
@@ -220,7 +229,7 @@ const AddFamilia = () => {
         <input
           type="number"
           className="form-control"
-          id="Hijos"
+          id="hijos"
           value={familia.hijos}
           onChange={handleChange}
         />
@@ -231,7 +240,7 @@ const AddFamilia = () => {
         <input
           type="number"
           className="form-control"
-          id="Edad Promedio"
+          id="edad"
           value={familia.edad}
           onChange={handleChange}
         />
@@ -241,7 +250,7 @@ const AddFamilia = () => {
         <input
           type="text"
           className="form-control"
-          id="RiesgoDeContagio"
+          id="riesgo"
           value={familia.riesgo}
           onChange={handleChange}
         />
@@ -251,7 +260,7 @@ const AddFamilia = () => {
         <input
           type="number"
           className="form-control"
-          id="RedesDeApoyo"
+          id="redesDeApoyo"
           value={familia.redesDeApoyo}
           onChange={handleChange}
         />

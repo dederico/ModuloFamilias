@@ -186,7 +186,7 @@ const FamiliaEvaluada = ({
     // getVivienda
     // getGastos
     // ...
-    const calificacionTotal = (calificacionPrevia * 100) / 50;
+    const calificacionTotal = calificacionPrevia * 2;
     setCalificacion(calificacionTotal);
   };
   useEffect(() => {

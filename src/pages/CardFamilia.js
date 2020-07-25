@@ -44,6 +44,13 @@ const CardFamilia = () => {
           ingresosMensuales={familias[familia].ingresosMensuales}
           gastosMensuales={familias[familia].gastosMensuales}
           vivienda={familias[familia].vivienda}
+          espera={familias[familia].espera}
+          tiempo={familias[familia].tiempo}
+          preparacion={familias[familia].preparacion}
+          hijos={familias[familia].hijos}
+          edad={familias[familia].edad}
+          riesgo={familias[familia].riesgo}
+          redesDeApoyo={familias[familia].redesDeApoyo}
         />
       ))
     );
