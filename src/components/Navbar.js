@@ -1,11 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import {
-//   UncontrolledDropdown,
-//   DropdownToggle,
-//   DropdownMenu,
-//   DropdownItem,
-// } from "reactstrap"
 import "./Navbar.css";
 
 const Navbar = () => {
