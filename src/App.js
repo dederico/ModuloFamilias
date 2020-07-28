@@ -6,6 +6,7 @@ import P404 from "./pages/P404";
 import AddUser from "./pages/auth/AddUser";
 import CardFamilia from "./pages/CardFamilia";
 import ProtectedRoute from "../src/components/ProtectedRoute";
+import Registro from "../src/components/Registro";
 import "./App.css";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -15,9 +16,11 @@ function App() {
     <Router>
       <Switch>
         <Route exact path="/">
-          <Home></Home>
+          <Home />
         </Route>
-
+        <Route exact path="/create-familia">
+          <Registro />
+        </Route>
         <ProtectedRoute exact path="/create-account">
           <AddUser />
         </ProtectedRoute>
@@ -25,7 +28,7 @@ function App() {
           {/* FamiliaOuter */}
           <CardFamilia />
         </ProtectedRoute>
-        <ProtectedRoute exact path="/familia/agregar">
+        <ProtectedRoute exact path="/add-familia">
           <AgregarFamilia></AgregarFamilia>
         </ProtectedRoute>
         <ProtectedRoute exact path="/familia/:id">

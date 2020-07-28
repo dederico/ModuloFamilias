@@ -136,7 +136,7 @@ const AddFamilia = () => {
 
   return (
     <Layout className="container mh-100" title="Home">
-      {JSON.stringify(familia)}
+      {/* {JSON.stringify(familia)} */}
       <h1>Agregar Familia</h1>
       <div>
         <label htmlFor="title">Apellidos </label>
