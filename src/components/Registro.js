@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
+import NavbarRegistro from "../components/NavbarRegsitro";
 
 const Registro = () => {
   const history = useHistory();
@@ -122,6 +123,48 @@ const Registro = () => {
           FechaNacimientoElla: event.target.value,
         });
         break;
+      case "LugarNacimientoEl":
+        setCandidato({
+          ...candidato,
+          LugarNacimientoEl: event.target.value,
+        });
+        break;
+      case "LugarNacimientoElla":
+        setCandidato({
+          ...candidato,
+          LugarNacimientoElla: event.target.value,
+        });
+        break;
+      case "NacionalidadEl":
+        setCandidato({
+          ...candidato,
+          NacionalidadEl: event.target.value,
+        });
+        break;
+      case "NacionalidadElla":
+        setCandidato({
+          ...candidato,
+          NacionalidadElla: event.target.value,
+        });
+        break;
+      case "EstadoCivilEl":
+        setCandidato({
+          ...candidato,
+          EstadoCivilEl: event.target.value,
+        });
+        break;
+      case "EstadoCivilElla":
+        setCandidato({
+          ...candidato,
+          EstadoCivilElla: event.target.value,
+        });
+        break;
+      case "FechaDeMatrimonio":
+        setCandidato({
+          ...candidato,
+          FechaDeMatrimonio: event.target.value,
+        });
+        break;
     }
   };
 
@@ -129,7 +172,7 @@ const Registro = () => {
     if (candidato.nombreEl.length > 0) {
       axios
         .post(
-          "https://adopciones-db12b.firebaseio.com/candidatos/-MDKwO6WiKmX9tvVW9mW/candidatos.json",
+          "https://adopciones-db12b-3ba3f.firebaseio.com/Candidatos.json",
           candidato
         )
         .then(({ data }) => {
@@ -152,6 +195,7 @@ const Registro = () => {
 
   return (
     <>
+      <NavbarRegistro />
       <h1>Resgistrate!</h1>
 
       <label htmlFor="title">Nombre </label>
@@ -190,6 +234,71 @@ const Registro = () => {
         value={candidato.FechaNacimientoElla}
         onChange={handleChange}
       />
+      <label htmlFor="title">Lugar de nacimiento del Padre </label>
+      <input
+        type="text"
+        className="form-control"
+        id="LugarNacimientoPadre"
+        placeholder="Donde nacio el Padre"
+        value={candidato.LugarNacimientoEl}
+        onChange={handleChange}
+      />
+      <label htmlFor="title">Lugar de nacimiento de la Madre </label>
+      <input
+        type="text"
+        className="form-control"
+        id="LugarNacimientoMadre"
+        placeholder="Donde nacio la Madre"
+        value={candidato.LugarNacimientoElla}
+        onChange={handleChange}
+      />
+      <label htmlFor="title">Nacionalidad del Padre </label>
+      <input
+        type="text"
+        className="form-control"
+        id="NacionalidadPadre"
+        placeholder="Nacionalidad del Padre"
+        value={candidato.NacionalidadEl}
+        onChange={handleChange}
+      />
+      <label htmlFor="title">Nacionalidad de la Madre </label>
+      <input
+        type="text"
+        className="form-control"
+        id="NacionalidadMadre"
+        placeholder="Nacionalidad de la Madre"
+        value={candidato.NacionalidadElla}
+        onChange={handleChange}
+      />
+      <label htmlFor="title">Estado Civil del Padre </label>
+      <input
+        type="text"
+        className="form-control"
+        id="EstadoCivilPadre"
+        placeholder="Estado Civil del Padre"
+        value={candidato.EstadoCivilEl}
+        onChange={handleChange}
+      />
+      <label htmlFor="title">Estado Civil de la Madre </label>
+      <input
+        type="text"
+        className="form-control"
+        id="EstadoCivilMadre"
+        placeholder="Estado Civil de la Madre"
+        value={candidato.EstadoCivilElla}
+        onChange={handleChange}
+      />
+
+      <label htmlFor="title">Fecha de Matrimonio </label>
+      <input
+        type="date"
+        className="form-control"
+        id="FechaDeMatrimonio"
+        placeholder="Fecha del Matrimonio"
+        value={candidato.FechaDeMatrimonio}
+        onChange={handleChange}
+      />
+
       <button
         type="submit"
         className="btn btn-primary"

@@ -21,6 +21,9 @@ function App() {
         <Route exact path="/create-familia">
           <Registro />
         </Route>
+        <Route exact path="/create-familia-fisica">
+          <Registro />
+        </Route>
         <ProtectedRoute exact path="/create-account">
           <AddUser />
         </ProtectedRoute>
