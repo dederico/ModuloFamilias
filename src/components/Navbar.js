@@ -26,7 +26,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item active">
-              <Link to="/familia/agregar" className="nav-link">
+              <Link to="/add-familia" className="nav-link">
                 Agregar
               </Link>
             </li>

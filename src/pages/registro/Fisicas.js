@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
-import NavbarRegistro from "../components/NavbarRegsitro";
+import NavbarRegistro from "../../components/NavbarRegistro";
+import "../../components/registro/Registro.css";
 
-const Registro = () => {
+const Fisicas = () => {
   const history = useHistory();
   const [candidato, setCandidato] = useState({
     candidatos: [
@@ -99,77 +100,71 @@ const Registro = () => {
     // task { title, descript...}
     // eslint-disable-next-line default-case
     switch (event.target.id) {
-      case "nombreEl":
+      case "EstaturaEl":
         setCandidato({
           ...candidato,
-          nombreEl: event.target.value,
+          EstaturaEl: event.target.value,
         });
         break;
-      case "nombreElla":
+      case "EstaturaElla":
         setCandidato({
           ...candidato,
-          nombreElla: event.target.value,
+          EstaturaElla: event.target.value,
         });
         break;
-      case "FechaNacimientoEl":
+      case "PesoEl":
         setCandidato({
           ...candidato,
-          FechaNacimientoEl: event.target.value,
+          PesoElla: event.target.value,
         });
         break;
-      case "FechaNacimientoElla":
+      case "PesoElla":
         setCandidato({
           ...candidato,
-          FechaNacimientoElla: event.target.value,
+          PesoElla: event.target.value,
         });
         break;
-      case "LugarNacimientoEl":
+      case "ColorOjosEl":
         setCandidato({
           ...candidato,
-          LugarNacimientoEl: event.target.value,
+          ColorOjosEl: event.target.value,
         });
         break;
-      case "LugarNacimientoElla":
+      case "ColorOjosElla":
         setCandidato({
           ...candidato,
-          LugarNacimientoElla: event.target.value,
+          ColorOjosElla: event.target.value,
         });
         break;
-      case "NacionalidadEl":
+      case "ComplexionEl":
         setCandidato({
           ...candidato,
-          NacionalidadEl: event.target.value,
+          ComplexionEl: event.target.value,
         });
         break;
-      case "NacionalidadElla":
+      case "ComplexionElla":
         setCandidato({
           ...candidato,
-          NacionalidadElla: event.target.value,
+          ComplexionElla: event.target.value,
         });
         break;
-      case "EstadoCivilEl":
+      case "TezEl":
         setCandidato({
           ...candidato,
-          EstadoCivilEl: event.target.value,
+          TezEl: event.target.value,
         });
         break;
-      case "EstadoCivilElla":
+      case "TezElla":
         setCandidato({
           ...candidato,
-          EstadoCivilElla: event.target.value,
-        });
-        break;
-      case "FechaDeMatrimonio":
-        setCandidato({
-          ...candidato,
-          FechaDeMatrimonio: event.target.value,
+          TezElla: event.target.value,
         });
         break;
     }
   };
 
   const createCandidato = () => {
-    if (candidato.nombreEl.length > 0) {
+    if (candidato.PesoEl.length > 0) {
       axios
         .post(
           "https://adopciones-db12b-3ba3f.firebaseio.com/Candidatos.json",
@@ -196,109 +191,82 @@ const Registro = () => {
   return (
     <>
       <NavbarRegistro />
-      <h1>Resgistrate!</h1>
+      <h1>Resgistra Aqui tu informacion Fisica</h1>
 
-      <label htmlFor="title">Nombre </label>
+      <label htmlFor="title">Estatura del Padre</label>
       <input
-        type="text"
+        type="number"
         className="form-control"
-        id="NombrePadre"
-        placeholder="Nombre Completo del Padre"
-        value={candidato.nombreEl}
+        id="EstaturaPadre"
+        placeholder="Estatura del Padre"
+        value={candidato.EstaturaEl}
         onChange={handleChange}
       />
-      <label htmlFor="title">Nombre </label>
+      <label htmlFor="title">Estatura de la Madre</label>
       <input
-        type="text"
+        type="number"
         className="form-control"
         id="NombreMadre"
-        placeholder="Nombre Completo de la Madre"
-        value={candidato.nombreElla}
+        placeholder="Estatura de la Madre"
+        value={candidato.EstaturaElla}
         onChange={handleChange}
       />
-      <label htmlFor="title">Fecha de Nacimiento Padre </label>
+      <label htmlFor="title">Peso del Padre </label>
       <input
-        type="date"
+        type="number"
         className="form-control"
-        id="NacimientoPadre"
-        placeholder="DD/MM/AA"
-        value={candidato.FechaNacimientoEl}
+        id="PesoPadre"
+        placeholder="Peso en KG"
+        value={candidato.PesoEl}
         onChange={handleChange}
       />
-      <label htmlFor="title">Fecha de Nacimiento Madre </label>
+      <label htmlFor="title">Peso de la Madre </label>
       <input
-        type="date"
+        type="number"
         className="form-control"
-        id="NacimientoMadre"
-        placeholder="DD/MM/AA"
-        value={candidato.FechaNacimientoElla}
+        id="PesoMadre"
+        placeholder="Peso en KG"
+        value={candidato.PesoElla}
         onChange={handleChange}
       />
-      <label htmlFor="title">Lugar de nacimiento del Padre </label>
-      <input
-        type="text"
-        className="form-control"
-        id="LugarNacimientoPadre"
-        placeholder="Donde nacio el Padre"
-        value={candidato.LugarNacimientoEl}
-        onChange={handleChange}
-      />
-      <label htmlFor="title">Lugar de nacimiento de la Madre </label>
+      <label htmlFor="title">Color de Ojose del Padre </label>
       <input
         type="text"
         className="form-control"
-        id="LugarNacimientoMadre"
-        placeholder="Donde nacio la Madre"
-        value={candidato.LugarNacimientoElla}
+        id="OjosPadre"
+        placeholder="Color de Ojos del Padre"
+        value={candidato.ColorOjosEl}
         onChange={handleChange}
       />
-      <label htmlFor="title">Nacionalidad del Padre </label>
+      <label htmlFor="title">Color de Ojos de la Madre </label>
       <input
         type="text"
         className="form-control"
-        id="NacionalidadPadre"
-        placeholder="Nacionalidad del Padre"
-        value={candidato.NacionalidadEl}
+        id="OjosMadre"
+        placeholder="Color de Ojo de la Madre"
+        value={candidato.ColorOjosElla}
         onChange={handleChange}
       />
-      <label htmlFor="title">Nacionalidad de la Madre </label>
+      <label htmlFor="title">Complexion del Padre </label>
       <input
         type="text"
         className="form-control"
-        id="NacionalidadMadre"
-        placeholder="Nacionalidad de la Madre"
-        value={candidato.NacionalidadElla}
+        id="ComplexionPadre"
+        placeholder="Complexion fisica del Padre"
+        value={candidato.ComplexionEl}
         onChange={handleChange}
       />
-      <label htmlFor="title">Estado Civil del Padre </label>
+      <label htmlFor="title">Complexion de la Madre </label>
       <input
         type="text"
         className="form-control"
-        id="EstadoCivilPadre"
-        placeholder="Estado Civil del Padre"
-        value={candidato.EstadoCivilEl}
-        onChange={handleChange}
-      />
-      <label htmlFor="title">Estado Civil de la Madre </label>
-      <input
-        type="text"
-        className="form-control"
-        id="EstadoCivilMadre"
-        placeholder="Estado Civil de la Madre"
-        value={candidato.EstadoCivilElla}
+        id="ComplexionMadre"
+        placeholder="Complexion fisica de la Madre"
+        value={candidato.ComplexionElla}
         onChange={handleChange}
       />
 
-      <label htmlFor="title">Fecha de Matrimonio </label>
-      <input
-        type="date"
-        className="form-control"
-        id="FechaDeMatrimonio"
-        placeholder="Fecha del Matrimonio"
-        value={candidato.FechaDeMatrimonio}
-        onChange={handleChange}
-      />
-
+      <br />
       <button
         type="submit"
         className="btn btn-primary"
@@ -310,4 +278,4 @@ const Registro = () => {
   );
 };
 
-export default Registro;
+export default Fisicas;
