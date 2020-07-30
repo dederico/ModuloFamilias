@@ -35,6 +35,8 @@ const AuthAccount = () => {
       console.log(user);
       window.sessionStorage.setItem("idToken", user.user.uid);
 
+      window.sessionStorage.setItem("email", username);
+
       app.auth().signInWithEmailAndPassword(username, password);
       setAlert("Usuario verificado, redirigiendo a tu dashboard");
     } catch (error) {

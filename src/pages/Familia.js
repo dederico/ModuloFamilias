@@ -9,8 +9,7 @@ import {
 
 const items = [
   {
-    src:
-      "http://udgtv.com/wp-content/uploads/2019/08/Carlos-slim-Andres-Manuel-Lopez-Obrador-EFE-696x464.jpg",
+    src: "src/assets/WhatsApp Image 2020-07-27 at 1.02.54 PM.jpeg",
     altText: "Slide 1",
     caption: "Slide 1",
   },

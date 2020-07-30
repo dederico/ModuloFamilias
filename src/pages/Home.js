@@ -16,7 +16,7 @@ const Home = () => {
         </div>
       </div>
       <br />
-      <EvaluacionFamilia />
+      {/* <EvaluacionFamilia /> */}
     </Layout>
   );
 };

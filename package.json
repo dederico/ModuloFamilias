@@ -11,6 +11,7 @@
     "firebase": "^7.16.0",
     "firebaseui": "^4.5.2",
     "graphql": "^15.3.0",
+    "moment": "^2.27.0",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-bootstrap": "^1.2.1",

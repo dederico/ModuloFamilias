@@ -2,32 +2,34 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
-const Navbar = () => {
+const NavbarRegistro = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <Link to="/">Adopciones</Link>
+      <Link to="/create-familia" className="nav-link">
+        Datos Generales
+      </Link>
 
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item active">
-            <Link to="/" className="nav-link">
-              Home
+            <Link to="/create-familia-fisica" className="nav-link">
+              Fisica
             </Link>
           </li>
           <li className="nav-item active">
-            <Link to="/create-familia" className="nav-link">
-              Registro
+            <Link to="/create-familia-domicilio" className="nav-link">
+              Domicilio
             </Link>
           </li>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <li className="nav-item active">
-              <Link to="/list/familias" className="nav-link">
-                Familias
+              <Link to="/create-familia-org" className="nav-link">
+                Familia
               </Link>
             </li>
             <li className="nav-item active">
-              <Link to="/add-familia" className="nav-link">
-                Agregar
+              <Link to="/create-familia-familiares" className="nav-link">
+                Familiares
               </Link>
             </li>
             <li className="nav-item active">
@@ -54,4 +56,4 @@ const Navbar = () => {
     </nav>
   );
 };
-export default Navbar;
+export default NavbarRegistro;
