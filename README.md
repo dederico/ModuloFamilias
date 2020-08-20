@@ -1,3 +1,11 @@
+Como parte de mis responsabilidades, y con el objetivo de digitalizar, y democratizar el proceso de adopcion en el estado de NL, cree esta solucion que consta en 3 modulos.
+
+1. Las familias y su registro.
+2. Los empleados y la PRE-calificacion de las familias.
+3. Las capacitaciones, examanes, certificados y la preparacion para la adopcion.
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
