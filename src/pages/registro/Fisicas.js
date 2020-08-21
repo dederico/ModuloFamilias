@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 import axios from "axios";
 import NavbarRegistro from "../../components/NavbarRegistro";
 import "../../components/registro/Registro.css";
+import "./Fisicas.css";
 
 const Fisicas = () => {
   const history = useHistory();
@@ -100,64 +101,38 @@ const Fisicas = () => {
     // task { title, descript...}
     // eslint-disable-next-line default-case
     switch (event.target.id) {
-      case "EstaturaEl":
+      case "Estatura":
         setCandidato({
           ...candidato,
-          EstaturaEl: event.target.value,
+          Estatura: event.target.value,
         });
         break;
-      case "EstaturaElla":
+
+      case "Peso":
         setCandidato({
           ...candidato,
-          EstaturaElla: event.target.value,
+          Peso: event.target.value,
         });
         break;
-      case "PesoEl":
+
+      case "ColorOjos":
         setCandidato({
           ...candidato,
-          PesoElla: event.target.value,
+          ColorOjos: event.target.value,
         });
         break;
-      case "PesoElla":
+
+      case "Complexion":
         setCandidato({
           ...candidato,
-          PesoElla: event.target.value,
+          Complexion: event.target.value,
         });
         break;
-      case "ColorOjosEl":
+
+      case "Tez":
         setCandidato({
           ...candidato,
-          ColorOjosEl: event.target.value,
-        });
-        break;
-      case "ColorOjosElla":
-        setCandidato({
-          ...candidato,
-          ColorOjosElla: event.target.value,
-        });
-        break;
-      case "ComplexionEl":
-        setCandidato({
-          ...candidato,
-          ComplexionEl: event.target.value,
-        });
-        break;
-      case "ComplexionElla":
-        setCandidato({
-          ...candidato,
-          ComplexionElla: event.target.value,
-        });
-        break;
-      case "TezEl":
-        setCandidato({
-          ...candidato,
-          TezEl: event.target.value,
-        });
-        break;
-      case "TezElla":
-        setCandidato({
-          ...candidato,
-          TezElla: event.target.value,
+          Tez: event.target.value,
         });
         break;
     }
@@ -172,7 +147,7 @@ const Fisicas = () => {
         )
         .then(({ data }) => {
           if (data.nombreEl) {
-            history.push(`/familia/${data.nombreEl}`);
+            history.push(`/familia/${data.nombre}`);
           } else {
             alert("Algo salio mal");
           }
@@ -191,81 +166,55 @@ const Fisicas = () => {
   return (
     <>
       <NavbarRegistro />
-      <h1>Resgistra Aqui tu informacion Fisica</h1>
+      <main>
+        <div className="container">
+          <h1>Resgistra Aqui tu informacion Fisica</h1>
+          <label htmlFor="title">Estatura del interesado(a)</label>
+          <input
+            type="number"
+            className="form-control"
+            id="Estatura"
+            placeholder="Estatura del interesado(a)"
+            value={candidato.Estatura}
+            onChange={handleChange}
+          />
+          <label htmlFor="title">Peso del interesado(a) </label>
+          <input
+            type="number"
+            className="form-control"
+            id="Peso"
+            placeholder="Peso en KG"
+            value={candidato.PesoEl}
+            onChange={handleChange}
+          />
 
-      <label htmlFor="title">Estatura del Padre</label>
-      <input
-        type="number"
-        className="form-control"
-        id="EstaturaPadre"
-        placeholder="Estatura del Padre"
-        value={candidato.EstaturaEl}
-        onChange={handleChange}
-      />
-      <label htmlFor="title">Estatura de la Madre</label>
-      <input
-        type="number"
-        className="form-control"
-        id="NombreMadre"
-        placeholder="Estatura de la Madre"
-        value={candidato.EstaturaElla}
-        onChange={handleChange}
-      />
-      <label htmlFor="title">Peso del Padre </label>
-      <input
-        type="number"
-        className="form-control"
-        id="PesoPadre"
-        placeholder="Peso en KG"
-        value={candidato.PesoEl}
-        onChange={handleChange}
-      />
-      <label htmlFor="title">Peso de la Madre </label>
-      <input
-        type="number"
-        className="form-control"
-        id="PesoMadre"
-        placeholder="Peso en KG"
-        value={candidato.PesoElla}
-        onChange={handleChange}
-      />
-      <label htmlFor="title">Color de Ojose del Padre </label>
-      <input
-        type="text"
-        className="form-control"
-        id="OjosPadre"
-        placeholder="Color de Ojos del Padre"
-        value={candidato.ColorOjosEl}
-        onChange={handleChange}
-      />
-      <label htmlFor="title">Color de Ojos de la Madre </label>
-      <input
-        type="text"
-        className="form-control"
-        id="OjosMadre"
-        placeholder="Color de Ojo de la Madre"
-        value={candidato.ColorOjosElla}
-        onChange={handleChange}
-      />
-      <label htmlFor="title">Complexion del Padre </label>
-      <input
-        type="text"
-        className="form-control"
-        id="ComplexionPadre"
-        placeholder="Complexion fisica del Padre"
-        value={candidato.ComplexionEl}
-        onChange={handleChange}
-      />
-      <label htmlFor="title">Complexion de la Madre </label>
-      <input
-        type="text"
-        className="form-control"
-        id="ComplexionMadre"
-        placeholder="Complexion fisica de la Madre"
-        value={candidato.ComplexionElla}
-        onChange={handleChange}
-      />
+          <label htmlFor="title">Color de Ojose del interesado(a) </label>
+          <input
+            type="text"
+            className="form-control"
+            id="OjosPadre"
+            placeholder="Color de Ojos del interesado(a)"
+            value={candidato.ColorOjosEl}
+            onChange={handleChange}
+          />
 
+          <label htmlFor="title">Complexion del interesado(a)</label>
+          <input
+            type="text"
+            className="form-control"
+            id="ComplexionPadre"
+            placeholder="Complexion fisica del interesado(a)"
+            value={candidato.ComplexionEl}
+            onChange={handleChange}
+          />
+        </div>
+
+        <aside>
+          <div>
+            <img src="../img/dif.png" alt="Dif" />
+          </div>
+        </aside>
+      </main>
       <br />
       <button
         type="submit"

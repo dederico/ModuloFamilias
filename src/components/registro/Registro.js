@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 import axios from "axios";
 import NavbarRegistro from "../NavbarRegistro";
 import "../../components/registro/Registro.css";
 
 const Registro = () => {
-  const history = useHistory();
+  // const history = useHistory();
   const [candidato, setCandidato] = useState({
     esSoltero: false,
   });
@@ -14,55 +14,55 @@ const Registro = () => {
     // task { title, descript...}
     // eslint-disable-next-line default-case
     switch (event.target.id) {
-      case "NombrePadre":
+      case "nombre":
         setCandidato({
           ...candidato,
           nombre: event.target.value,
         });
         break;
-      case "NacimientoPadre":
+      case "nacimiento":
         setCandidato({
           ...candidato,
           fechaNacimiento: event.target.value,
         });
         break;
-      case "LugarNacimientoPadre":
+      case "lugarNacimiento":
         setCandidato({
           ...candidato,
           lugarNacimiento: event.target.value,
         });
         break;
-      case "NacionalidadPadre":
+      case "nacionalidad":
         setCandidato({
           ...candidato,
           nacionalidad: event.target.value,
         });
         break;
-      case "EstadoCivilPadre":
+      case "estadoCivil":
         setCandidato({
           ...candidato,
           estadoCivil: event.target.value,
         });
         break;
-      case "EscolaridadEl":
+      case "escolaridad":
         setCandidato({
           ...candidato,
           escolaridad: event.target.value,
         });
         break;
-      case "ProfesionEl":
+      case "profesion":
         setCandidato({
           ...candidato,
           profesion: event.target.value,
         });
         break;
-      case "OcupacionEl":
+      case "ocupacion":
         setCandidato({
           ...candidato,
           ocupacion: event.target.value,
         });
         break;
-      case "ReligionEl":
+      case "religion":
         setCandidato({
           ...candidato,
           religion: event.target.value,
@@ -109,97 +109,106 @@ const Registro = () => {
   return (
     <>
       <NavbarRegistro />
-      <h1>Registrate!</h1>
+      <main className="flex-duo">
+        <section className="d-flex justify-content-center">
+          <div className="right">
+            <h1>Registrate!</h1>
+            <label htmlFor="title">Nombre Completo</label>
+            <input
+              type="text"
+              className="form-control"
+              id="Nombre"
+              placeholder="Nombre Completo del Interesado"
+              value={candidato.nombre}
+              onChange={handleChange}
+            />
+            <label htmlFor="title">Fecha de Nacimiento </label>
+            <input
+              type="date"
+              className="form-control"
+              id="Nacimiento"
+              placeholder="DD/MM/AA"
+              value={candidato.fechaNacimiento}
+              onChange={handleChange}
+            />
+            <label htmlFor="title">Lugar de nacimiento </label>
+            <input
+              type="text"
+              className="form-control"
+              id="LugarNacimiento"
+              placeholder="Donde nacio?"
+              value={candidato.lugarNacimiento}
+              onChange={handleChange}
+            />
+            <label htmlFor="title">Nacionalidad </label>
+            <input
+              type="text"
+              className="form-control"
+              id="Nacionalidad"
+              placeholder="Nacionalidad del Interesado(a)"
+              value={candidato.nacionalidad}
+              onChange={handleChange}
+            />
+            <label htmlFor="title">Estado Civil </label>
+            <input
+              type="text"
+              className="form-control"
+              id="EstadoCivil"
+              placeholder="Estado Civil del interesado(a)"
+              value={candidato.estadoCivil}
+              onChange={handleChange}
+            />
+            <label htmlFor="title">Escolaridad </label>
+            <input
+              type="text"
+              className="form-control"
+              id="Escolaridad"
+              placeholder="Escolaridad maxima"
+              value={candidato.escolaridad}
+              onChange={handleChange}
+            />
+            <label htmlFor="title">Profesion </label>
+            <input
+              type="text"
+              className="form-control"
+              id="Profesion"
+              placeholder="Profesion del Interesado(a)"
+              value={candidato.profesion}
+              onChange={handleChange}
+            />
+            <label htmlFor="title">Ocupacion </label>
+            <input
+              type="text"
+              className="form-control"
+              id="Ocupacion"
+              placeholder="Ocupacion actual del Interesado(a)"
+              value={candidato.ocupacion}
+              onChange={handleChange}
+            />
+            <label htmlFor="title">Religion </label>
+            <input
+              type="text"
+              className="form-control"
+              id="Religion"
+              placeholder="Religion del Interesado(a)"
+              value={candidato.religion}
+              onChange={handleChange}
+            />
+            <br />
+            <button
+              type="submit"
+              className="btn btn-primary"
+              onClick={createCandidato}
+            >
+              Completar Registro
+            </button>
+          </div>
+        </section>
 
-      <label htmlFor="title">Nombre Completo del Padre</label>
-      <input
-        type="text"
-        className="form-control"
-        id="NombrePadre"
-        placeholder="Nombre Completo del Padre"
-        value={candidato.nombre}
-        onChange={handleChange}
-      />
-      <label htmlFor="title">Fecha de Nacimiento Padre </label>
-      <input
-        type="date"
-        className="form-control"
-        id="NacimientoPadre"
-        placeholder="DD/MM/AA"
-        value={candidato.fechaNacimiento}
-        onChange={handleChange}
-      />
-      <label htmlFor="title">Lugar de nacimiento del Padre </label>
-      <input
-        type="text"
-        className="form-control"
-        id="LugarNacimientoPadre"
-        placeholder="Donde nacio el Padre"
-        value={candidato.lugarNacimiento}
-        onChange={handleChange}
-      />
-      <label htmlFor="title">Nacionalidad del Padre </label>
-      <input
-        type="text"
-        className="form-control"
-        id="NacionalidadPadre"
-        placeholder="Nacionalidad del Padre"
-        value={candidato.nacionalidad}
-        onChange={handleChange}
-      />
-      <label htmlFor="title">Estado Civil del Padre </label>
-      <input
-        type="text"
-        className="form-control"
-        id="EstadoCivilPadre"
-        placeholder="Estado Civil del Padre"
-        value={candidato.estadoCivil}
-        onChange={handleChange}
-      />
-      <label htmlFor="title">Escolaridad </label>
-      <input
-        type="text"
-        className="form-control"
-        id="EscolaridadEl"
-        placeholder="Escolaridad maxima del Padre"
-        value={candidato.escolaridad}
-        onChange={handleChange}
-      />
-      <label htmlFor="title">Profesion </label>
-      <input
-        type="text"
-        className="form-control"
-        id="ProfesionEl"
-        placeholder="Profesion del Padre"
-        value={candidato.profesion}
-        onChange={handleChange}
-      />
-      <label htmlFor="title">Ocupacion </label>
-      <input
-        type="text"
-        className="form-control"
-        id="OcupacionEl"
-        placeholder="Ocupacion actual del Padre"
-        value={candidato.ocupacion}
-        onChange={handleChange}
-      />
-      <label htmlFor="title">Religion </label>
-      <input
-        type="text"
-        className="form-control"
-        id="ReligionEl"
-        placeholder="Religion del Padre"
-        value={candidato.religion}
-        onChange={handleChange}
-      />
-      <br />
-      <button
-        type="submit"
-        className="btn btn-primary"
-        onClick={createCandidato}
-      >
-        Completar Registro
-      </button>
+        <aside>
+          <img src="/img/dif.png" alt="Dif" />
+        </aside>
+      </main>
     </>
   );
 };

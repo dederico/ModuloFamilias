@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 // import Layout from "./../components/Layout";
-import AddFamilia from "./../components/AgregarFamilia";
+// import AddFamilia from "./../components/AgregarFamilia";
 import axios from "axios";
 import FamiliaEvaluada from "./../components/FamiliaEvaluada";
 

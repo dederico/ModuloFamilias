@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 // import { useHistory } from "react-router-dom";
 import axios from "axios";
-import NavbarRegistro from "../NavbarRegistro";
-import "../../components/registro/Registro.css";
+import NavbarRegistro from "../../components/NavbarRegistro";
+import "./Domicilio.css";
 
 const Domicilio = () => {
   // const history = useHistory();
@@ -97,72 +97,77 @@ const Domicilio = () => {
   return (
     <>
       <NavbarRegistro />
-      <h1>Domicilio!</h1>
-
-      <label htmlFor="title">Calle</label>
-      <input
-        type="text"
-        className="form-control"
-        id="calleDomicilio"
-        placeholder="Nombre de la calle del domicilio"
-        value={candidato.calle}
-        onChange={handleChange}
-      />
-      <label htmlFor="title">Numero</label>
-      <input
-        type="number"
-        className="form-control"
-        id="numeroDomicilio"
-        placeholder="#300"
-        value={candidato.numero}
-        onChange={handleChange}
-      />
-      <label htmlFor="title">Colonia</label>
-      <input
-        type="text"
-        className="form-control"
-        id="coloniaDomicilio"
-        placeholder="Colonia del Domicilio"
-        value={candidato.colonia}
-        onChange={handleChange}
-      />
-      <label htmlFor="title">Municipio</label>
-      <input
-        type="text"
-        className="form-control"
-        id="municipioDomicilio"
-        placeholder="Municipio donde se ubica el domicilio."
-        value={candidato.municipio}
-        onChange={handleChange}
-      />
-      <label htmlFor="title">Estado </label>
-      <input
-        type="text"
-        className="form-control"
-        id="estado"
-        placeholder="Estado donde se ubica el domicilio "
-        value={candidato.estado}
-        onChange={handleChange}
-      />
-      <label htmlFor="title">Codigo Postal </label>
-      <input
-        type="text"
-        className="form-control"
-        id="codigoPostal"
-        placeholder="C.P."
-        value={candidato.codigoPostal}
-        onChange={handleChange}
-      />
-      <label htmlFor="title">Telefono </label>
-      <input
-        type="tel"
-        className="form-control"
-        id="Telefono"
-        placeholder="Telefono"
-        value={candidato.telefono}
-        onChange={handleChange}
-      />
-
+      <main>
+        <div className="container">
+          <h1>Domicilio!</h1>
+          <label htmlFor="title">Calle</label>
+          <input
+            type="text"
+            className="form-control"
+            id="calleDomicilio"
+            placeholder="Nombre de la calle del domicilio"
+            value={candidato.calle}
+            onChange={handleChange}
+          />
+          <label htmlFor="title">Numero</label>
+          <input
+            type="number"
+            className="form-control"
+            id="numeroDomicilio"
+            placeholder="#300"
+            value={candidato.numero}
+            onChange={handleChange}
+          />
+          <label htmlFor="title">Colonia</label>
+          <input
+            type="text"
+            className="form-control"
+            id="coloniaDomicilio"
+            placeholder="Colonia del Domicilio"
+            value={candidato.colonia}
+            onChange={handleChange}
+          />
+          <label htmlFor="title">Municipio</label>
+          <input
+            type="text"
+            className="form-control"
+            id="municipioDomicilio"
+            placeholder="Municipio donde se ubica el domicilio."
+            value={candidato.municipio}
+            onChange={handleChange}
+          />
+          <label htmlFor="title">Estado </label>
+          <input
+            type="text"
+            className="form-control"
+            id="estado"
+            placeholder="Estado donde se ubica el domicilio "
+            value={candidato.estado}
+            onChange={handleChange}
+          />
+          <label htmlFor="title">Codigo Postal </label>
+          <input
+            type="text"
+            className="form-control"
+            id="codigoPostal"
+            placeholder="C.P."
+            value={candidato.codigoPostal}
+            onChange={handleChange}
+          />
+          <label htmlFor="title">Telefono </label>
+          <input
+            type="tel"
+            className="form-control"
+            id="Telefono"
+            placeholder="Telefono"
+            value={candidato.telefono}
+            onChange={handleChange}
+          />
+        </div>
+        <aside>
+          <img src="../img/dif.png" alt="Dif" />
+        </aside>
+      </main>
       <br />
       <button
         type="submit"
@@ -171,9 +176,6 @@ const Domicilio = () => {
       >
         Completar Registro
       </button>
-      <aside>
-        <img src="../../assets/06-dif (1).png" alt="imagen" />
-      </aside>
     </>
   );
 };

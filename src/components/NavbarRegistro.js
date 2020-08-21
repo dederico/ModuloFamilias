@@ -5,10 +5,10 @@ import "./Navbar.css";
 const NavbarRegistro = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      {" "}
       <Link to="/create-familia" className="nav-link">
         Datos Generales
       </Link>
-
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item active">
@@ -24,12 +24,12 @@ const NavbarRegistro = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <li className="nav-item active">
               <Link to="/create-familia-org" className="nav-link">
-                Familia
+                Organizacion Familiar
               </Link>
             </li>
             <li className="nav-item active">
               <Link to="/create-familia-familiares" className="nav-link">
-                Familiares
+                Informacion de Familiares
               </Link>
             </li>
             <li className="nav-item active">

@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Layout from "../components/Layout";
 import OuterFamiliaCard from "../components/OuterFamiliaCard";
-import EvaluacionFamilia from "../components/EvaluacionFamilia";
+// import EvaluacionFamilia from "../components/EvaluacionFamilia";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 
 const CardFamilia = () => {
-  const { id } = useParams();
+  // const { id } = useParams();
   const [informacionUsuario] = useState(window.sessionStorage.getItem("email"));
   const [familias, setFamilias] = useState({});
   const [error, setError] = useState(null);

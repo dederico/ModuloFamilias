@@ -1,3 +1,18 @@
-div nav.navbar.navbar-expand-lg.navbar-light.bg-light {
-  background-color: aqua;
+.nav {
+  background-color: rgb(rgb(231, 77, 239));
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.navbar.navbar-expand-lg.navbar-light.bg-light {
+  background-color: purple !important;
+  display: flex;
+  justify-content: center;
+}
+ul {
+  align-items: center;
+}
+li {
+  align-items: center;
 }

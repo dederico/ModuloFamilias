@@ -1,8 +1,40 @@
-input {
-  max-width: 80%;
+/* #root {
+  display: flex;
+  background-color: aqua;
+} */
+
+body,
+html {
+  display: flex;
+  flex-direction: column;
+}
+.flex-duo {
+  /* background-color: red; */
+  display: flex !important;
+  /*flex-direction: column;*/
+  justify-content: center;
+}
+.flex-duo section,
+.flex-duo aside {
+  width: 50%;
+  flex-direction: column;
+}
+.d-flex {
+  display: flex;
+}
+.justify-content-center {
+  align-items: center;
+  justify-content: center;
+}
+.width-80-percent {
+  width: 80%;
+}
+.form-control {
+  max-width: 100%;
   margin-left: 20px !important;
 }
 label {
+  display: flex;
   margin-top: 10px;
   margin-left: 20px;
 }
@@ -12,5 +44,21 @@ h1 {
 .btn.btn-primary {
   display: flex;
   justify-content: center;
-  margin-left: 40%;
+  margin-left: 14%;
+}
+aside {
+  /* background-color: blue; */
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ImagenDIF {
+  flex-direction: column;
+  max-width: 10%;
+  max-height: 10%;
+}
+.right {
+  width: 100%;
 }

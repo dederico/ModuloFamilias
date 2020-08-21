@@ -7,7 +7,7 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "aws-amplify": "^3.0.20",
-    "bootstrap": "^4.5.0",
+    "bootstrap": "^4.5.2",
     "firebase": "^7.16.0",
     "firebaseui": "^4.5.2",
     "graphql": "^15.3.0",
