@@ -1,13 +1,16 @@
 main {
   display: flex !important;
 }
-.container-domicilio {
+.container-familia {
   display: flex;
   flex-direction: column;
   width: 50% !important;
   justify-content: flex-start;
   margin-left: 0px;
   margin-right: 0px;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
 }
 aside {
   justify-content: center;

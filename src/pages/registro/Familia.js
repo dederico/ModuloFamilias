@@ -2,7 +2,7 @@ import React, { useState } from "react";
 // import { useHistory } from "react-router-dom";
 import axios from "axios";
 import NavbarRegistro from "../../components/NavbarRegistro";
-import "../../components/registro/Registro.css";
+import "./Familia.css";
 
 const OrganizacionFamiliar = () => {
   // const history = useHistory();
@@ -134,7 +134,7 @@ const OrganizacionFamiliar = () => {
     <>
       <NavbarRegistro />
       <main>
-        <div className="container">
+        <div className="container-familia">
           <h1>Organizacion Familiar!</h1>
 
           <label htmlFor="title">Hijos</label>
@@ -256,7 +256,9 @@ const OrganizacionFamiliar = () => {
           />
         </div>
         <aside>
-          <img src="../img/dif.png" alt="Dif" />
+          <div>
+            <img src="../img/dif.png" alt="Dif" />
+          </div>
         </aside>
       </main>
       <br />

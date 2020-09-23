@@ -51,6 +51,7 @@ const CardFamilia = () => {
           edad={familias[familia].edad}
           riesgo={familias[familia].riesgo}
           redesDeApoyo={familias[familia].redesDeApoyo}
+          imageUrl={familias[familia].imageUrl}
         />
       ))
     );

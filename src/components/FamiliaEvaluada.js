@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./FamiliaEvaluada.css";
 
 const FamiliaEvaluada = ({
   ingresosMensuales,
@@ -71,55 +72,55 @@ const FamiliaEvaluada = ({
   };
 
   const getEspera = (espera) => {
-    if (espera >= 36) {
+    if (parseInt(espera) >= 36) {
       return 5;
-    } else if (espera < 36 && espera > 24) {
+    } else if (parseInt(espera) < 36 && parseInt(espera) > 24) {
       return 4;
-    } else if (espera < 24 && espera > 12) {
+    } else if (parseInt(espera) < 24 && parseInt(espera) > 12) {
       return 3;
-    } else if (espera < 12 && espera > 6) {
+    } else if (parseInt(espera) < 12 && parseInt(espera) > 6) {
       return 2;
-    } else if (espera < 6 && espera > 1) {
+    } else if (parseInt(espera) < 6 && parseInt(espera) > 1) {
       return 1;
     }
     return 0;
   };
   const getTiempo = (tiempo) => {
-    if (tiempo >= 12) {
+    if (parseInt(tiempo) >= 12) {
       return 5;
-    } else if (tiempo < 12 && tiempo > 9) {
+    } else if (parseInt(tiempo) < 12 && parseInt(tiempo) > 9) {
       return 4;
-    } else if (tiempo < 9 && tiempo > 6) {
+    } else if (parseInt(tiempo) < 9 && parseInt(tiempo) > 6) {
       return 3;
-    } else if (tiempo < 6 && tiempo > 3) {
+    } else if (parseInt(tiempo) < 6 && parseInt(tiempo) > 3) {
       return 2;
-    } else if (tiempo < 3 && tiempo > 1) {
+    } else if (parseInt(tiempo) < 3 && parseInt(tiempo) > 1) {
       return 1;
     }
     return 0;
   };
   const getPreparacion = (preparacion) => {
-    if (preparacion >= 3) {
+    if (parseInt(preparacion) >= 3) {
       return 5;
-    } else if (preparacion < 3 && preparacion >= 2) {
+    } else if (parseInt(preparacion) < 3 && parseInt(preparacion) >= 2) {
       return 4;
-    } else if (preparacion < 2 && preparacion >= 1) {
+    } else if (parseInt(preparacion) < 2 && parseInt(preparacion) >= 1) {
       return 3;
-    } else if (preparacion <= 1 && preparacion > 0) {
+    } else if (parseInt(preparacion) <= 1 && parseInt(preparacion) > 0) {
       return 2;
     }
     return 0;
   };
   const getHijos = (hijos) => {
-    if (hijos === 0) {
+    if (parseInt(hijos) === 0) {
       return 5;
-    } else if (hijos === 1) {
+    } else if (parseInt(hijos) === 1) {
       return 4;
-    } else if (hijos === 2) {
+    } else if (parseInt(hijos) === 2) {
       return 3;
-    } else if (hijos === 3) {
+    } else if (parseInt(hijos) === 3) {
       return 2;
-    } else if (hijos > 3) {
+    } else if (parseInt(hijos) > 3) {
       return 1;
     }
     return 0;
@@ -146,7 +147,7 @@ const FamiliaEvaluada = ({
       return 4;
     } else if (riesgo === "Moderado") {
       return 3;
-    } else if (riesgo === "ALgo") {
+    } else if (riesgo === "Algo") {
       return 2;
     } else if (riesgo === "Mucho") {
       return 1;
@@ -155,15 +156,15 @@ const FamiliaEvaluada = ({
   };
 
   const getRedesDeApoyo = (redesDeApoyo) => {
-    if (redesDeApoyo >= 5) {
+    if (parseInt(redesDeApoyo) >= 5) {
       return 5;
-    } else if (redesDeApoyo === 4) {
+    } else if (parseInt(redesDeApoyo) === 4) {
       return 4;
-    } else if (redesDeApoyo === 3) {
+    } else if (parseInt(redesDeApoyo) === 3) {
       return 3;
-    } else if (redesDeApoyo === 2) {
+    } else if (parseInt(redesDeApoyo) === 2) {
       return 2;
-    } else if (redesDeApoyo === 1) {
+    } else if (parseInt(redesDeApoyo) === 1) {
       return 1;
     }
     return 0;
@@ -195,7 +196,7 @@ const FamiliaEvaluada = ({
   }, []);
   return (
     <>
-      <p>
+      <p className="p-familiaEvaulada">
         {apellidos} <b>{calificacion}</b>
       </p>
       <br />

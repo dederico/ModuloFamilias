@@ -1,0 +1,24 @@
+footer {
+  position: sticky;
+  height: 100px;
+  background-color: purple;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-parragraph {
+  padding-top: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* .container-footer {
+  margin-top: -170px;
+}*/
+
+h4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

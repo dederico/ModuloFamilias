@@ -8,17 +8,23 @@
     "@testing-library/user-event": "^7.1.2",
     "aws-amplify": "^3.0.20",
     "bootstrap": "^4.5.2",
-    "firebase": "^7.16.0",
+    "filepond": "^4.19.2",
+    "filepond-plugin-image-exif-orientation": "^1.0.9",
+    "filepond-plugin-image-preview": "^4.6.4",
+    "firebase": "^7.19.1",
     "firebaseui": "^4.5.2",
     "graphql": "^15.3.0",
     "moment": "^2.27.0",
+    "mongoose": "^5.10.0",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-bootstrap": "^1.2.1",
     "react-dom": "^16.13.1",
+    "react-filepond": "^7.0.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "reactstrap": "^8.5.1",
+    "shortid": "^2.2.15",
     "use-persisted-state": "^0.3.0"
   },
   "scripts": {
@@ -41,5 +47,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }

@@ -167,7 +167,7 @@ const Fisicas = () => {
     <>
       <NavbarRegistro />
       <main>
-        <div className="container">
+        <div className="container-fisicas">
           <h1>Resgistra Aqui tu informacion Fisica</h1>
           <label htmlFor="title">Estatura del interesado(a)</label>
           <input

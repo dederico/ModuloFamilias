@@ -22,6 +22,8 @@ const OuterFamiliaCard = ({
   edad,
   riesgo,
   redesDeApoyo,
+  imageId,
+  imageUrl,
 }) => {
   const history = useHistory();
 
@@ -39,12 +41,7 @@ const OuterFamiliaCard = ({
   return (
     <div className="col-lg-3">
       <Card>
-        <CardImg
-          top
-          width="5%"
-          src="https://stock.adobe.com/mx/Download/Watermarked/283435999"
-          alt="Card image cap"
-        />
+        <CardImg top width="5%" src={imageUrl} alt="Dif" />
         <CardBody>
           <CardTitle>{apellidos}</CardTitle>
           <br />
@@ -66,7 +63,9 @@ const OuterFamiliaCard = ({
             edad={edad}
             riesgo={riesgo}
             redesDeApoyo={redesDeApoyo}
+            imageId={imageId}
           />
+
           <button className="btn btn-danger" onClick={deleteFamilia}>
             Borrar
           </button>

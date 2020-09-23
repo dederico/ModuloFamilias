@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import createPersistedState from "use-persisted-state";
+//import createPersistedState from "use-persisted-state";
 // firebase
 // aun sin importar el firebaseConfig.js
 import app from "../../pages/auth/firebaseConfig";
@@ -58,11 +58,13 @@ const AuthAccount = () => {
 
   return (
     <div className="flex-center auth">
-      <div>
-        <h1 className="text-center">Identificate</h1>
-        <h2 className="text-center">Y comienza a trabajar</h2>
+      <div className="page-container">
+        <div className="image-container-authaccount">
+          <img className="img-authaccount" src="../img/dif.png" alt="Dif" />
+        </div>
+        <h1 className="text-center">Adopciones</h1>
 
-        <FormGroup>
+        <FormGroup className="FormGroup">
           <Label>Usuario</Label>
           <Input
             type="text"
@@ -71,7 +73,7 @@ const AuthAccount = () => {
             onChange={(e) => handleOnChange(e, setUsername)}
           />
         </FormGroup>
-        <FormGroup>
+        <FormGroup className="FormGroup">
           <Label>Contraseña</Label>
           <Input
             type="password"
@@ -80,13 +82,15 @@ const AuthAccount = () => {
             onChange={(e) => handleOnChange(e, setPassword)}
           />
         </FormGroup>
-        <Link to="/list/familias">
-          <button className="btn btn-primary btn-block" onClick={authAccount}>
-            Ingreso
-          </button>
-        </Link>
-        {alert && <small>{alert}</small>}
-        {/* <Link to="/create-account" className="link-auth">
+        <div className="btn-container-authaccount">
+          <Link to="/list/familias">
+            <button className="btn-primary-authaccout" onClick={authAccount}>
+              <p className="ingreso-authaccount">Ingreso</p>
+            </button>
+          </Link>
+        </div>
+        {/* {alert && <small>{alert}</small>}
+        <Link to="/create-account" className="link-auth">
           Crea una cuenta para empezar a trabajar.
         </Link> */}
       </div>

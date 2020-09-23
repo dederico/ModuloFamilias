@@ -1,18 +1,79 @@
 .nav {
+  height: 60px;
   background-color: rgb(rgb(231, 77, 239));
   display: flex;
   justify-content: center;
   flex-wrap: nowrap;
   align-items: center;
+  color: white;
 }
 .navbar.navbar-expand-lg.navbar-light.bg-light {
   background-color: purple !important;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  color: white;
+  align-items: space;
+  height: 60px;
+}
+.collapse.navbar-collapse {
+  color: white;
 }
 ul {
   align-items: center;
+  color: white;
+  justify-content: space-around;
+  /* background-color: gray; */
+  list-style: none;
+  flex-wrap: nowrap;
 }
 li {
+  justify-content: space-around;
+  display: flex;
+  height: 30px;
+  /* background-color: green; */
   align-items: center;
+  color: white;
+  flex-wrap: wrap;
+}
+Link {
+  color: white;
+}
+nav-link {
+  color: white;
+  border: 10px, solid, white;
+}
+a {
+  color: white;
+}
+.nav-item.active {
+  color: white;
+  /* background-color: black; */
+  border: 10px, solid, white;
+}
+p {
+  color: white;
+  border-color: white;
+}
+.form-control.mr-sm-2 {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 420px !important;
+}
+.btn-nav-link {
+  height: 35px;
+  background-color: black;
+}
+a {
+  margin-top: 24px;
+}
+.collapse.navbar-collapse {
+  justify-content: space-around;
+  margin-bottom: 48px;
+  margin-left: 14px;
+}
+.form-control.mr-sm-2 {
+  margin-top: 40px;
+}
+.btn.btn-outline-success.my-2.my-sm-0 {
+  margin-bottom: -37px !important;
 }

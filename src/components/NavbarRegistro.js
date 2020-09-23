@@ -13,44 +13,44 @@ const NavbarRegistro = () => {
         <ul className="navbar-nav mr-auto">
           <li className="nav-item active">
             <Link to="/create-familia-fisica" className="nav-link">
-              Fisica
+              <p> Fisica</p>
             </Link>
           </li>
           <li className="nav-item active">
             <Link to="/create-familia-domicilio" className="nav-link">
-              Domicilio
+              <p>Domicilio</p>
             </Link>
           </li>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <li className="nav-item active">
-              <Link to="/create-familia-org" className="nav-link">
-                Organizacion Familiar
-              </Link>
-            </li>
-            <li className="nav-item active">
-              <Link to="/create-familia-familiares" className="nav-link">
-                Informacion de Familiares
-              </Link>
-            </li>
-            <li className="nav-item active">
-              <button onClick={"/"} className="nav-link">
-                Cerrar
-              </button>
-            </li>
+          {/* <div className="collapse navbar-collapse" id="navbarSupportedContent"> */}
+          <li className="nav-item active">
+            <Link to="/create-familia-org" className="nav-link">
+              <p>Organizacion</p>
+            </Link>
+          </li>
+          <li className="nav-item active">
+            <Link to="/create-familia-familiares" className="nav-link">
+              <p>Familiares</p>
+            </Link>
+          </li>
+          <li className="nav-item active">
+            <Link to="/" className="nav-link">
+              <p>Home</p>
+            </Link>
+          </li>
 
-            <input
-              className="form-control mr-sm-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button
-              className="btn btn-outline-success my-2 my-sm-0"
-              type="submit"
-            >
-              Search
-            </button>
-          </div>
+          <input
+            className="form-control mr-sm-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button
+            className="btn btn-outline-success my-2 my-sm-0"
+            type="submit"
+          >
+            <p>Search</p>
+          </button>
+          {/* </div> */}
         </ul>
       </div>
     </nav>

@@ -63,14 +63,14 @@ const AddUser = () => {
   return (
     <>
       {/* <Layout className="container mh-100" title="Home"> */}
-      {JSON.stringify(user)}
+      {/* {JSON.stringify(user)} */}
       <h1>User e-mail:</h1>
       <div>
         <label htmlFor="title">email </label>
         <input
-          type="text"
+          type="email"
           className="form-control"
-          id="apellidos"
+          id="email"
           value={user.email}
           onChange={handleChange}
         />
@@ -81,7 +81,7 @@ const AddUser = () => {
         <input
           type="password"
           className="form-control"
-          id="ingresosMensuales"
+          id="password"
           value={user.password}
           onChange={handleChange}
         />

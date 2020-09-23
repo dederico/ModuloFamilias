@@ -98,7 +98,7 @@ const Domicilio = () => {
     <>
       <NavbarRegistro />
       <main>
-        <div className="container">
+        <div className="container-domicilio">
           <h1>Domicilio!</h1>
           <label htmlFor="title">Calle</label>
           <input
@@ -164,8 +164,11 @@ const Domicilio = () => {
             onChange={handleChange}
           />
         </div>
+
         <aside>
-          <img src="../img/dif.png" alt="Dif" />
+          <div>
+            <img src="../img/dif.png" alt="Dif" />
+          </div>
         </aside>
       </main>
       <br />

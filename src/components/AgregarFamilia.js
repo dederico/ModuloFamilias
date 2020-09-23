@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import Layout from "./../components/Layout";
 import axios from "axios";
+import { ImageUpload } from "./Images";
 
 const AddFamilia = () => {
   const history = useHistory();
@@ -18,6 +19,7 @@ const AddFamilia = () => {
     edad: 0,
     riesgo: "",
     redesDeApoyo: 0,
+    imageId: "",
   });
   const handleChange = (event) => {
     // task { title, descript...}
@@ -132,6 +134,9 @@ const AddFamilia = () => {
         "No has llenado todos los campos o has llenado de forma incorrecta un campo."
       );
     }
+  };
+  const onRequestSave = (imageUrl) => {
+    familia.imageUrl = imageUrl;
   };
 
   return (
@@ -256,7 +261,7 @@ const AddFamilia = () => {
         />
       </div>
       <div className="form-group">
-        <label htmlFor="description">Redes de Apoyo:</label>
+        <label htmlFor="redesDeApoyo">Redes de Apoyo:</label>
         <input
           type="number"
           className="form-control"
@@ -265,6 +270,8 @@ const AddFamilia = () => {
           onChange={handleChange}
         />
       </div>
+      <ImageUpload onRequestSave={onRequestSave} />
+
       <br />
       <button type="submit" className="btn btn-primary" onClick={createTask}>
         Agregar Familia

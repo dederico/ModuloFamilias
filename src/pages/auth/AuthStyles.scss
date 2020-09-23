@@ -1,9 +1,18 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
 .flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
+.FormGroup {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
 .auth {
   height: 100vh;
   h2 {
@@ -18,4 +27,36 @@
     display: block;
     color: lightslategrey;
   }
+}
+.page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.btn-container-authaccount {
+  display: flex;
+  height: 100%;
+}
+.btn-primary-authaccout {
+  display: flex;
+  border-style: none;
+  border-radius: 20px;
+  width: 280px;
+  height: 50px;
+  background-color: #bcd531;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+.img-authaccount {
+  margin-top: -100px;
+}
+.ingreso-authaccount {
+  padding-top: 15px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  color: black;
+  font-weight: 700;
 }
