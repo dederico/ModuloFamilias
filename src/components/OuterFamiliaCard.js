@@ -1,6 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import { ListGroup, ListGroupItem } from "reactstrap";
+// import { ListGroup, ListGroupItem } from "reactstrap";
 import { Card, CardImg, CardBody, CardTitle, CardSubtitle } from "reactstrap";
 import "./OuterFamiliaCard.scss";
 import axios from "axios";
@@ -69,6 +69,7 @@ const OuterFamiliaCard = ({
           <button className="btn btn-danger" onClick={deleteFamilia}>
             Borrar
           </button>
+          <button className="btn btn-primary info">Mas Informacion</button>
         </CardBody>
       </Card>
     </div>
