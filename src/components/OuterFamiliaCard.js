@@ -1,6 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-
+import { ListGroup, ListGroupItem } from "reactstrap";
 import { Card, CardImg, CardBody, CardTitle, CardSubtitle } from "reactstrap";
 import "./OuterFamiliaCard.scss";
 import axios from "axios";

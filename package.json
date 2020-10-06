@@ -23,7 +23,7 @@
     "react-filepond": "^7.0.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
-    "reactstrap": "^8.5.1",
+    "reactstrap": "^8.6.0",
     "shortid": "^2.2.15",
     "use-persisted-state": "^0.3.0"
   },
